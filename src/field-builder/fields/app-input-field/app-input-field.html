@@ -1,0 +1,22 @@
+<div class="form-group" data-ng-class="{'active-field':vm.field.active}" data-ng-hide="vm.field.hide">
+
+	<label for="{{vm.field.name}}" class="control-label">{{vm.field.label || 'Undefined'}} <span class="text-danger" data-ng-show="vm.field.validation.required">*</span></label>
+
+	<input
+		type="{{vm.field.type}}"
+		class="form-control" id="{{vm.field.name}}"
+		name="{{vm.field.name}}"
+		ui-mask="{{vm.field.mask}}"
+		ui-mask-placeholder
+		data-ng-disabled="vm.field.disable"
+		data-ng-model="vm.formData[vm.field.name]"
+		ng-change="onChange(data)"
+		ng-required="vm.field.validation.required"
+		ng-maxlength="vm.field.validation.maxlenght"
+		ng-minlength="vm.field.validation.maxlenght"
+		ng-pattern="vm.field.validation.pattern"
+		placeholder="{{!vm.field.mask?vm.field.placeholder:vm.field.mask}}">
+
+		<form-error-msgs  field-name="vm.formName[vm.field.name]"></form-error-msgs>
+
+</div>

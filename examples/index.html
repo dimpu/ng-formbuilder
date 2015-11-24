@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" id="wtheme" href="#">
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body ng-controller="AppCtrl as app">
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="" class="navbar-brand">ngFormBuilder</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes" aria-expanded="false">Themes <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><a ng-click="app.loadCss('default')">Default</a></li>
+                <li class="divider"></li>
+                <li><a ng-click="app.loadCss('cerulean')">Cerulean</a></li>
+                <li><a ng-click="app.loadCss('cosmo')">Cosmo</a></li>
+                <li><a ng-click="app.loadCss('cyborg')">Cyborg</a></li>
+                <li><a ng-click="app.loadCss('darkly')">Darkly</a></li>
+                <li><a ng-click="app.loadCss('flatly')">Flatly</a></li>
+                <li><a ng-click="app.loadCss('journal')">Journal</a></li>
+                <li><a ng-click="app.loadCss('lumen')">Lumen</a></li>
+                <li><a ng-click="app.loadCss('paper')">Paper</a></li>
+                <li><a ng-click="app.loadCss('readable')">Readable</a></li>
+                <li><a ng-click="app.loadCss('sandstone')">Sandstone</a></li>
+                <li><a ng-click="app.loadCss('simplex')">Simplex</a></li>
+                <li><a ng-click="app.loadCss('slate')">Slate</a></li>
+                <li><a ng-click="app.loadCss('spacelab')">Spacelab</a></li>
+                <li><a ng-click="app.loadCss('superhero')">Superhero</a></li>
+                <li><a ng-click="app.loadCss('united')">United</a></li>
+                <li><a ng-click="app.loadCss('yeti')">Yeti</a></li>
+              </ul>
+            </li>
+
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/dimpu/ngFormBuilder" target="_blank">Get Code</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+      <!-- <h1 class="text-center">ngFormBuilder</h1> -->
+      <br />
+      <br />
+      <br />
+      <br />
+    <div class="container" >
+      <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <form-builder form-json="app.formJson"></form-builder>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <field-pusher form-json="app.formJson"></field-pusher>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-messages.min.js"></script>
+
+    <!-- <script src="../build/ng-formbuilder.js"></script> -->
+    <script src="../build/build.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+
+  </body>
+</html>

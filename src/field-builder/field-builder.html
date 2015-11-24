@@ -1,0 +1,14 @@
+<div class="field-settings col-xs-{{vm.field.columnsize}}">
+
+  <div ng-switch="vm.field.type">
+
+      <app-input-field ng-switch-default field="vm.field" form-name="vm.formName" form-data="vm.formData"></app-input-field>
+      <app-checkbox-field ng-switch-when="checkbox" field="vm.field" form-name="vm.formName" form-data="vm.formData"></app-checkbox-field>
+      <app-radio-field ng-switch-when="radio" field="vm.field" form-name="vm.formName" form-data="vm.formData"></app-radio-field>
+      <app-select-field ng-switch-when="select" field="vm.field" form-name="vm.formName" form-data="vm.formData"></app-select-field>
+      <app-textarea-field ng-switch-when="textarea" field="vm.field" form-name="vm.formName" form-data="vm.formData"></app-textarea-field>
+
+  </div>
+
+
+</div>

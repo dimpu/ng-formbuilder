@@ -1,0 +1,7 @@
+<div class="form-group" data-ng-class="{'active-field':vm.field.active}" data-ng-click="onvm.fieldClick()" data-ng-hide="vm.field.hide">
+	<label for="{{vm.field.name}}" class="control-label" data-ng-hide="!vm.field.label">{{vm.field.label || 'undefined'}}</label>
+	<div data-ng-repeat="item in vm.field.items" class="radio">
+		<label class="i-checks">
+			<input type="radio" data-ng-value="item.value || 'undefined'" name="vm.field.name" data-ng-disabled="vm.field.disable" ng-model="vm.formData[vm.field.name]"> <i></i> {{item.label || 'undefined'}}</label>
+	</div>
+</div>

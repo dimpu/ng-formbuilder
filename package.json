@@ -1,0 +1,35 @@
+{
+  "name": "ng-form-builder",
+  "version": "1.0.0",
+  "description": "simple json based form builder engine using angular 1.x ",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo src/form-builder.js --serve=build/ng-formbuilder.js --open --live -- -t babelify -t stringify -t browserify-css",
+    "test": "mocha ",
+    "build": "browserify -t babelify -t stringify -t browserify-css src/form-builder.js>build/ng-formbuilder.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimpu/ngFormBuilder.git"
+  },
+  "keywords": [
+    "angular",
+    "formbuilder",
+    "forms",
+    "json"
+  ],
+  "author": "Dimpu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dimpu/ngFormBuilder/issues"
+  },
+  "homepage": "https://github.com/dimpu/ngFormBuilder#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "browserify-css": "^0.8.1",
+    "budo": "^6.0.4",
+    "stringify": "^3.1.0"
+  }
+}

@@ -1,0 +1,20 @@
+<div class="form-group" data-ng-class="{'active-field':vm.field.active}" data-ng-hide="vm.field.hide">
+
+	<label for="{{vm.field.name}}" class="control-label">{{vm.field.label || 'Undefined'}} <span class="text-danger" data-ng-show="vm.field.validation.required">*</span></label>
+
+		<div class="field-control">
+			<div class="ng-signature-wrap" ng-class="vm.field.position">
+	  		<canvas class="ng-signature" ng-signature="vm.signature" ></canvas>
+				<div class="ng-signature-footer">
+		      <div class="text-center">Sign above</div>
+		      <button class="btn clear" ng-click="vm.clear()">Clear</button>
+		      <button class="btn save" ng-click="vm.save()">Save</button>
+		    </div>
+			</div>
+
+		</div>
+
+<!--
+		<form-error-msgs  field-name="vm.formName[vm.field.name]"></form-error-msgs> -->
+
+</div>

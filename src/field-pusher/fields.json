@@ -1,0 +1,179 @@
+{
+
+  "text": {
+    "type": "text",
+    "label": "Text",
+    "name": "text_",
+    "placeholder": "Enter your text!",
+    "validate": {
+      "require": "false",
+      "minlenght": "undefined",
+      "maxlenght": "undefined"
+    },
+    "columnsize": 12
+  },
+  "email": {
+    "type": "email",
+    "label": "Email",
+    "name": "email_",
+    "placeholder": "Enter your email",
+    "validate": {
+      "require": "false",
+      "minlenght": "undefined",
+      "maxlenght": "undefined"
+    },
+    "columnsize": 12
+  },
+  "tel": {
+    "type": "tel",
+    "label": "Phone",
+    "name": "phone_",
+    "placeholder": "Enter your phone number!",
+    "validate": {
+      "require": "false",
+      "minlenght": "undefined",
+      "maxlenght": "undefined"
+    },
+    "columnsize": 12
+  },
+  "textarea": {
+    "type": "textarea",
+    "label": "Textarea",
+    "name": "textarea_",
+    "placeholder": "Enter your details",
+    "validate": {
+      "require": "false",
+      "minlenght": "undefined",
+      "maxlenght": "undefined"
+    },
+    "columnsize": 12
+  },
+  "radio": {
+    "type": "radio",
+    "label": "Radio",
+    "name": "radio_",
+    "default": "",
+    "inline": "false",
+    "columnsize": 12,
+    "items": [{
+      "label": "Radio",
+      "value": "radio"
+    }]
+  },
+  "checkbox": {
+    "type": "checkbox",
+    "label": "Checkbox",
+    "name": "chackbox_",
+    "columnsize": 12,
+    "items": [{
+      "label": "Checkbox",
+      "value": "checkbox"
+    }]
+  },
+  "select": {
+    "type": "select",
+    "name": "select_",
+    "label":"Select",
+    "placeholder": "--Select--",
+    "columnsize": 12,
+    "items": [{
+      "label": "Option 1",
+      "value": "option_1"
+    }]
+  },
+  "date": {
+    "type": "date",
+    "label":"Date",
+    "name": "date_",
+    "default": "",
+    "columnsize": 12
+  },
+  "number": {
+    "type": "number",
+    "label":"Number",
+    "name": "number_",
+    "columnsize": 12
+  },
+  "time":{
+    "type": "time",
+    "label":"Time",
+    "name": "time_",
+    "default": "",
+    "columnsize": 12
+  },
+  "color":{
+    "type": "color",
+    "label": "Color",
+    "name": "color_",
+    "placeholder": "Pick color",
+    "validate": {
+      "require": "false",
+      "minlenght": "undefined",
+      "maxlenght": "undefined"
+    },
+    "columnsize": 12
+  },
+  "datetime": {
+    "type": "datetime",
+    "label": "Date Time",
+    "name": "dt_",
+    "placeholder": "Enter Date time!",
+    "validate": {
+      "require": "false",
+      "minlenght": "undefined",
+      "maxlenght": "undefined"
+    },
+    "columnsize": 12
+  },
+  "month": {
+    "type": "month",
+    "label": "Month",
+    "name": "month_",
+    "placeholder": "Enter Month",
+    "validate": {
+      "require": "false",
+      "minlenght": "undefined",
+      "maxlenght": "undefined"
+    },
+    "columnsize": 12
+  },
+  "range": {
+    "type": "range",
+    "label": "Range",
+    "name": "range_",
+    "placeholder": "Enter Month",
+    "validate": {
+      "require": "false",
+      "minlenght": "undefined",
+      "maxlenght": "undefined"
+    },
+    "columnsize": 12
+  },
+  "week": {
+    "type": "week",
+    "label": "Week",
+    "name": "week_",
+    "placeholder": "Enter Week",
+    "validate": {
+      "require": "false",
+      "minlenght": "undefined",
+      "maxlenght": "undefined"
+    },
+    "columnsize": 12
+  },
+  "url": {
+    "type": "url",
+    "label": "url",
+    "name": "url_",
+    "placeholder": "Enter Url",
+    "validate": {
+      "require": "false",
+      "minlenght": "undefined",
+      "maxlenght": "undefined"
+    },
+    "columnsize": 12
+  }
+
+
+
+}

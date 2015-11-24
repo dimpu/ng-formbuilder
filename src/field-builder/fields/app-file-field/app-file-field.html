@@ -1,0 +1,19 @@
+<div class="form-group" data-ng-class="{'active-field':vm.field.active}"  data-ng-hide="vm.field.hide">
+		<label for="{{vm.field.name}}" class="control-label">{{vm.field.label || 'Undefined'}} <span class="text-danger" data-ng-show="vm.field.validation.required">*</span></label>
+				<form class="dropzone"
+				method="post"
+				enctype="multipart/form-data"
+				file-drop-zone
+				dropzone="dropzone"
+				field-name = "vm.field.name"
+				dropzone-config="vm.field.dropzoneConfig"
+				event-handlers = "vm.field.events"
+				model = "vm.formData[vm.field.name]"
+				 >
+
+					<!-- <input name="file" type="file" multiple /> -->
+				</form>
+
+				<form-error-msgs field-name="vm.formName[vm.field.name]"></form-error-msgs>
+
+</div>
