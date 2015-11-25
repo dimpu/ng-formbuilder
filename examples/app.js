@@ -1,5 +1,6 @@
 angular.module('App',['ngFormBuilder'])
 .controller('AppCtrl',function($scope){
+
   var vm = this;
   this.theme = 'default';
   this.loadCss = function(theme){
@@ -33,17 +34,17 @@ angular.module('App',['ngFormBuilder'])
           },
           "columnsize": 6
         },{
-            "type": "phone",
-            "label": "Phone",
-            "name": "phone_",
-            "placeholder": "Enter your phone number!",
-            "validate": {
-              "require": "false",
-              "minlenght": "undefined",
-              "maxlenght": "undefined"
-            },
-            "columnsize": 12
-          }]
+          "type": "phone",
+          "label": "Phone",
+          "name": "phone_",
+          "placeholder": "Enter your phone number!",
+          "validate": {
+            "require": "false",
+            "minlenght": "undefined",
+            "maxlenght": "undefined"
+          },
+          "columnsize": 12
+    }]
   };
 
 

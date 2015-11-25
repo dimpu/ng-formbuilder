@@ -1,5 +1,4 @@
 {
-
   "text": {
     "type": "text",
     "label": "Text",
@@ -173,7 +172,4 @@
     },
     "columnsize": 12
   }
-
-
-
 }
