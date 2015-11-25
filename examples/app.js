@@ -1,9 +1,11 @@
 angular.module('App',['ngFormBuilder'])
 .controller('AppCtrl',function($scope){
+  var vm = this;
   this.theme = 'default';
   this.loadCss = function(theme){
     $('#wtheme').attr('href','//bootswatch.com/'+theme+'/bootstrap.min.css');
   };
+
 
   this.formJson = {
     "form_name":"Form Builder",
@@ -43,4 +45,14 @@ angular.module('App',['ngFormBuilder'])
             "columnsize": 12
           }]
   };
+
+
+  $scope.$watch("vm.formJson",function(newVal){
+    console.log(newVal);
+    vm.jsonModel = JSON.stringify(vm.formJson, null, "    ");
+  });
+
+
+
+
 });
