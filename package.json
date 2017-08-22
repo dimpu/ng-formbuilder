@@ -7,7 +7,7 @@
     "start": "budo src/form-builder.js --serve=build/ng-formbuilder.js --open --live -- -t babelify -t stringify -t browserify-css",
     "builder:serve": "budo builder/builder.js --serve=build/ng-formbuilder.js --open --live -- -t babelify -t stringify -t browserify-css",
     "serve": "run-p builder:serve build",
-    "test": "mocha ",
+    "test": "karma test",
     "build": "browserify -t babelify -t stringify -t browserify-css src/form-builder.js>build/ng-formbuilder.min.js"
   },
   "repository": {
@@ -32,6 +32,10 @@
     "browserify": "^12.0.1",
     "browserify-css": "^0.8.1",
     "budo": "^6.0.4",
+    "karma": "^1.7.0",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-mocha": "^0.2.2",
+    "mocha": "^2.5.3",
     "npm-run-all": "^4.0.2",
     "stringify": "^3.1.0"
   },
