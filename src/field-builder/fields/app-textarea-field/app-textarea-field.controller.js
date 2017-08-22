@@ -1,9 +1,9 @@
 import CommonTask from '../common-task.class';
 
-class AppTextareaFieldController extends CommonTask{
-	constructor(){
-		super();
-	}
+class AppTextareaFieldController extends CommonTask {
+    constructor() {
+        super();
+    }
 }
 
 

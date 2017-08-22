@@ -18,26 +18,26 @@ import AppTextareaField from './fields/app-textarea-field/app-textarea-field';
 // import AppGreyBarField from './fields/app-greybar-field/app-greybar-field';
 //
 let fieldBuilderModule = angular.module('field-builder', [
-	AppInputField.name,
-	AppCheckboxField.name,
-	// AppDateField.name,
-	AppRadioField.name,
-	AppSelectField.name,
-	AppTextareaField.name,
+        AppInputField.name,
+        AppCheckboxField.name,
+        // AppDateField.name,
+        AppRadioField.name,
+        AppSelectField.name,
+        AppTextareaField.name,
 
-	//
-	// AppEmptyField.name,
-	// AppFileField.name,
-	// AppHeaderField.name,
-	// AppImageField.name,
-	// AppSubformField.name,
-	// AppTimeField.name,
-	// AppPriceField.name,
-	// AppTotalPriceField.name,
-	// AppSignatureField.name,
-	// AppEditerField.name,
-	// AppGreyBarField.name
-])
-.directive('fieldBuilder', FieldBuilderComponent);
+        //
+        // AppEmptyField.name,
+        // AppFileField.name,
+        // AppHeaderField.name,
+        // AppImageField.name,
+        // AppSubformField.name,
+        // AppTimeField.name,
+        // AppPriceField.name,
+        // AppTotalPriceField.name,
+        // AppSignatureField.name,
+        // AppEditerField.name,
+        // AppGreyBarField.name
+    ])
+    .directive('fieldBuilder', FieldBuilderComponent);
 
 export default fieldBuilderModule;

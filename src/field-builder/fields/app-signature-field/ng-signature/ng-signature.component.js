@@ -9,12 +9,9 @@ let ngSignatureComponent = function(){
 		template,
 		link,
 		controller,
-		restrict: 'EA',
-		controllerAs: 'vm',
-		scope: {
+		bindings: {
 			ngSignature:'='
-		},
-		bindToController: true
+		}
 	};
 };
 

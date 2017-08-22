@@ -1,10 +1,7 @@
 class FieldBuilderController {
-	constructor(){
-		this.name = 'field-builder';
-		console.log(this);
-	}
-
+    constructor() {
+        this.name = 'field-builder';
+        console.log(this);
+    }
 }
-
-
 export default FieldBuilderController;

@@ -6,14 +6,11 @@ let appTextareaFieldComponent = function(){
 	return {
 		template,
 		controller,
-		restrict: 'E',
-		controllerAs: 'vm',
-		scope: {
+		bindings: {
 			field:'=',
 			formData:'=',
 			formName:'='
-		},
-		bindToController: true
+		}
 	};
 };
 

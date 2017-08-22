@@ -1,0 +1,36 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
+root = true
+
+[*]
+# Change these settings to your own preference
+indent_style = space
+indent_size = 4
+
+# We recommend you to keep these unchanged
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# 4 space indentation
+[*.{js,py}]
+indent_style = space
+indent_size = 4
+
+# Tabs indentation
+[*.{php,ctp,html}]
+indent_style = tabs
+indent_size = 4
+
+[*.md]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = false
+
+[*.{sass,scss}]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = false
+

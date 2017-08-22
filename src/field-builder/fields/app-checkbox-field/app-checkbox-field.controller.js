@@ -5,6 +5,4 @@ class AppCheckboxFieldController extends CommonTask{
 		super();
 	}
 }
-
-
 export default AppCheckboxFieldController;

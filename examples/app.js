@@ -48,9 +48,9 @@ angular.module('App',['ngFormBuilder'])
   };
 
 
-  $scope.$watch("vm.formJson",function(newVal){
+  $scope.$watch("$ctrl.formJson",function(newVal){
     console.log(newVal);
-    vm.jsonModel = JSON.stringify(vm.formJson, null, "    ");
+    $ctrl.jsonModel = JSON.stringify($ctrl.formJson, null, "    ");
   });
 
 

@@ -1,22 +1,22 @@
-<div class="form-group" data-ng-class="{'active-field':vm.field.active}" data-ng-hide="vm.field.hide">
+<div class="form-group" data-ng-class="{'active-field':$ctrl.field.active}" data-ng-hide="$ctrl.field.hide">
 
-	<label for="{{vm.field.name}}" class="control-label">{{vm.field.label || 'Undefined'}} <span class="text-danger" data-ng-show="vm.field.validation.required">*</span></label>
+	<label for="{{$ctrl.field.name}}" class="control-label">{{$ctrl.field.label || 'Undefined'}} <span class="text-danger" data-ng-show="$ctrl.field.validation.required">*</span></label>
 
 	<input
-		type="{{vm.field.type}}"
-		class="form-control" id="{{vm.field.name}}"
-		name="{{vm.field.name}}"
-		ui-mask="{{vm.field.mask}}"
+		type="{{$ctrl.field.type}}"
+		class="form-control" id="{{$ctrl.field.name}}"
+		name="{{$ctrl.field.name}}"
+		ui-mask="{{$ctrl.field.mask}}"
 		ui-mask-placeholder
-		data-ng-disabled="vm.field.disable"
-		data-ng-model="vm.formData[vm.field.name]"
+		data-ng-disabled="$ctrl.field.disable"
+		data-ng-model="$ctrl.formData[$ctrl.field.name]"
 		ng-change="onChange(data)"
-		ng-required="vm.field.validation.required"
-		ng-maxlength="vm.field.validation.maxlenght"
-		ng-minlength="vm.field.validation.maxlenght"
-		ng-pattern="vm.field.validation.pattern"
-		placeholder="{{!vm.field.mask?vm.field.placeholder:vm.field.mask}}">
+		ng-required="$ctrl.field.validation.required"
+		ng-maxlength="$ctrl.field.validation.maxlenght"
+		ng-minlength="$ctrl.field.validation.maxlenght"
+		ng-pattern="$ctrl.field.validation.pattern"
+		placeholder="{{!$ctrl.field.mask?$ctrl.field.placeholder:$ctrl.field.mask}}">
 
-		<form-error-msgs  field-name="vm.formName[vm.field.name]"></form-error-msgs>
+		<form-error-msgs  field-name="$ctrl.formName[$ctrl.field.name]"></form-error-msgs>
 
 </div>

@@ -7,59 +7,59 @@ import AppTimeFieldController from './app-time-field.controller';
 import AppTimeFieldComponent from './app-time-field.component';
 import AppTimeFieldTemplate from './app-time-field.html';
 
-describe('AppTimeField', ()=>{
-	let $rootScope,
-	makeController;
+describe('AppTimeField', () => {
+    let $rootScope,
+        makeController;
 
-	beforeEach(angular.mock.module(AppTimeFieldModule.name));
-	beforeEach(angular.mock.inject((_$rootScope_)=>{
-		$rootScope = _$rootScope_;
-		makeController = ()=>{
-			return new AppTimeFieldController();
-		};
-	}));
+    beforeEach(angular.mock.module(AppTimeFieldModule.name));
+    beforeEach(angular.mock.inject((_$rootScope_) => {
+        $rootScope = _$rootScope_;
+        makeController = () => {
+            return new AppTimeFieldController();
+        };
+    }));
 
-	describe('Module', ()=>{
-		// test things about the component module
-		// checking to see if it registers certain things and what not
-		// test for best practices with naming too
-		// test for routing
-	});
+    describe('Module', () => {
+        // test things about the component module
+        // checking to see if it registers certain things and what not
+        // test for best practices with naming too
+        // test for routing
+    });
 
-	describe('Controller', ()=>{
-		// test your controller here
+    describe('Controller', () => {
+        // test your controller here
 
-		it('should have a name property [REMOVE]', ()=>{ // erase me if you remove this.name from the controller
-			let controller = makeController();
+        it('should have a name property [REMOVE]', () => { // erase me if you remove this.name from the controller
+            let controller = makeController();
 
-			expect(controller).to.have.property('name');
-		});
-	});
+            expect(controller).to.have.property('name');
+        });
+    });
 
-	describe('Template', ()=>{
-		// test the template
-		// use Regexes to test that you are using the right bindings {{  }}
+    describe('Template', () => {
+        // test the template
+        // use Regexes to test that you are using the right bindings {{  }}
 
-		it('should have name in template [REMOVE]', ()=>{
-			expect(AppTimeFieldTemplate).to.match(/{{\s?vm\.name\s?}}/g);
-		});
-	});
+        it('should have name in template [REMOVE]', () => {
+            expect(AppTimeFieldTemplate).to.match(/{{\s?vm\.name\s?}}/g);
+        });
+    });
 
 
-	describe('Component', ()=>{
-			// test the component/directive itself
-			let component = AppTimeFieldComponent();
+    describe('Component', () => {
+        // test the component/directive itself
+        let component = AppTimeFieldComponent();
 
-			it('should use the right template',()=>{
-				expect(component.template).to.equal(AppTimeFieldTemplate);
-			});
+        it('should use the right template', () => {
+            expect(component.template).to.equal(AppTimeFieldTemplate);
+        });
 
-			it('should use controllerAs', ()=>{
-				expect(component).to.have.property('controllerAs');
-			});
+        it('should use controllerAs', () => {
+            expect(component).to.have.property('controllerAs');
+        });
 
-			it('should use the right controller', ()=>{
-				expect(component.controller).to.equal(AppTimeFieldController);
-			});
-	});
+        it('should use the right controller', () => {
+            expect(component.controller).to.equal(AppTimeFieldController);
+        });
+    });
 });

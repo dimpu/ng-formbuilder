@@ -1,25 +1,26 @@
-
-.ng-signature-wrap{
+.ng-signature-wrap {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.08) inset;
     border: 1px solid #e8e8e8;
-		padding: 15px;
-		display: inline-table;
-}
-.ng-signature-wrap.left{
-	float: left;
-}
-.ng-signature-wrap.right{
-	float:  right;
+    padding: 15px;
+    display: inline-table;
 }
 
-.ng-signature{
-	border: 1px solid #f4f4f4;
+.ng-signature-wrap.left {
+    float: left;
 }
 
-.ng-signature-footer .clear{
-float:left
+.ng-signature-wrap.right {
+    float: right;
 }
 
-.ng-signature-footer .save{
-float:right
+.ng-signature {
+    border: 1px solid #f4f4f4;
+}
+
+.ng-signature-footer .clear {
+    float: left
+}
+
+.ng-signature-footer .save {
+    float: right
 }

@@ -3,15 +3,14 @@ import link from './file-drop-zone.link';
 let fileDropZoneComponent = function(){
 	return {
 		link,
-		restrict: 'AE',
+		transclude: true,
 		template: '<div ng-transclude></div>',
-		scope: {
+		bindings: {
           dropzone: '=',
           dropzoneConfig: '=',
           eventHandlers: '=',
           model:'='
-		},
-    transclude: true
+		}
 	};
 };
 

@@ -1,7 +1,7 @@
 class FormErrorMsgsController {
-	constructor(){
-		this.name = 'form-error-msgs';
-	}
+    constructor() {
+        this.name = 'form-error-msgs';
+    }
 }
 
 
