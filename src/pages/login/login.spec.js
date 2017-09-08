@@ -2,20 +2,20 @@
 // https://github.com/Workiva/karma-jspm/issues/23
 import angular from 'angular';
 import 'angular-mocks';
-import Module from './/';
-import Controller from './/.controller';
-import Component from './/.component';
-import Template from './/.html';
+import PagesLoginLoginModule from './../../pages/login/login';
+import PagesLoginLoginController from './../../pages/login/login.controller';
+import PagesLoginLoginComponent from './../../pages/login/login.component';
+import PagesLoginLoginTemplate from './../../pages/login/login.html';
 
-describe('', ()=>{
+describe('PagesLoginLogin', ()=>{
 	let $rootScope,
 	makeController;
 
-	beforeEach(angular.mock.module(Module.name));
+	beforeEach(angular.mock.module(PagesLoginLoginModule.name));
 	beforeEach(angular.mock.inject((_$rootScope_)=>{
 		$rootScope = _$rootScope_;
 		makeController = ()=>{
-			return new Controller();
+			return new PagesLoginLoginController();
 		};
 	}));
 
@@ -41,17 +41,17 @@ describe('', ()=>{
 		// use Regexes to test that you are using the right bindings {{  }}
 
 		it('should have name in template [REMOVE]', ()=>{
-			expect(Template).to.match(/{{\s?vm\.name\s?}}/g);
+			expect(PagesLoginLoginTemplate).to.match(/{{\s?vm\.name\s?}}/g);
 		});
 	});
 
 
 	describe('Component', ()=>{
 			// test the component/directive itself
-			let component = Component();
+			let component = PagesLoginLoginComponent();
 
 			it('should use the right template',()=>{
-				expect(component.template).to.equal(Template);
+				expect(component.template).to.equal(PagesLoginLoginTemplate);
 			});
 
 			it('should use controllerAs', ()=>{
@@ -59,7 +59,7 @@ describe('', ()=>{
 			});
 
 			it('should use the right controller', ()=>{
-				expect(component.controller).to.equal(Controller);
+				expect(component.controller).to.equal(PagesLoginLoginController);
 			});
 	});
 });

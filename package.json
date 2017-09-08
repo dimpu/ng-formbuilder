@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "budo src/form-builder.js --serve=build/ng-formbuilder.js --open --live -- -t babelify -t stringify -t browserify-css",
-    "builder:serve": "budo builder/builder.js --serve=build/ng-formbuilder.js --open --live -- -t babelify -t stringify -t browserify-css",
+    "builder:serve": "budo src/index.js --open --live -- -t babelify -t stringify -t browserify-css",
     "serve": "run-p builder:serve build",
     "test": "karma test",
     "build": "browserify -t babelify -t stringify -t browserify-css src/form-builder.js>build/ng-formbuilder.min.js"

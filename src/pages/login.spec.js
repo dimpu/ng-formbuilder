@@ -2,20 +2,20 @@
 // https://github.com/Workiva/karma-jspm/issues/23
 import angular from 'angular';
 import 'angular-mocks';
-import FieldComposerModule from './field-composer';
-import FieldComposerController from './field-composer.controller';
-import FieldComposerComponent from './field-composer.component';
-import FieldComposerTemplate from './field-composer.html';
+import PagesLoginModule from './../../pages/login';
+import PagesLoginController from './../../pages/login.controller';
+import PagesLoginComponent from './../../pages/login.component';
+import PagesLoginTemplate from './../../pages/login.html';
 
-describe('FieldComposer', ()=>{
+describe('PagesLogin', ()=>{
 	let $rootScope,
 	makeController;
 
-	beforeEach(angular.mock.module(FieldComposerModule.name));
+	beforeEach(angular.mock.module(PagesLoginModule.name));
 	beforeEach(angular.mock.inject((_$rootScope_)=>{
 		$rootScope = _$rootScope_;
 		makeController = ()=>{
-			return new FieldComposerController();
+			return new PagesLoginController();
 		};
 	}));
 
@@ -41,17 +41,17 @@ describe('FieldComposer', ()=>{
 		// use Regexes to test that you are using the right bindings {{  }}
 
 		it('should have name in template [REMOVE]', ()=>{
-			expect(FieldComposerTemplate).to.match(/{{\s?vm\.name\s?}}/g);
+			expect(PagesLoginTemplate).to.match(/{{\s?vm\.name\s?}}/g);
 		});
 	});
 
 
 	describe('Component', ()=>{
 			// test the component/directive itself
-			let component = FieldComposerComponent();
+			let component = PagesLoginComponent();
 
 			it('should use the right template',()=>{
-				expect(component.template).to.equal(FieldComposerTemplate);
+				expect(component.template).to.equal(PagesLoginTemplate);
 			});
 
 			it('should use controllerAs', ()=>{
@@ -59,7 +59,7 @@ describe('FieldComposer', ()=>{
 			});
 
 			it('should use the right controller', ()=>{
-				expect(component.controller).to.equal(FieldComposerController);
+				expect(component.controller).to.equal(PagesLoginController);
 			});
 	});
 });

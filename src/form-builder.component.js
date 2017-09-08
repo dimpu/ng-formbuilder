@@ -6,12 +6,9 @@ let formBuilderComponent = function () {
     return {
         template,
         controller,
-        restrict: 'E',
-        controllerAs: 'vm',
-        scope: {
+        bindings: {
             formJson: '=', //field definition
-        },
-        bindToController: true
+        }
     };
 };
 
