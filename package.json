@@ -4,7 +4,7 @@
   "description": "simple json based form builder engine using angular 1.x ",
   "main": "index.js",
   "scripts": {
-    "start": "budo src/form-builder.js --serve=build/ng-formbuilder.js --open --live -- -t babelify -t stringify -t browserify-css",
+    "start": "budo src/index.js:index.js --dir='src' --open --pushstate --base  --live -- -t node-scssify -t babelify -t stringify -t browserify-css",
     "builder:serve": "budo src/index.js --open --live -- -t babelify -t stringify -t browserify-css",
     "serve": "run-p builder:serve build",
     "test": "karma test",
@@ -36,6 +36,7 @@
     "karma-babel-preprocessor": "^6.0.1",
     "karma-mocha": "^0.2.2",
     "mocha": "^2.5.3",
+    "node-scssify": "^1.0.0",
     "npm-run-all": "^4.0.2",
     "stringify": "^3.1.0"
   },

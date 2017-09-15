@@ -1,4 +1,4 @@
-
+import angular from 'angular';
 
 import AppInputFieldComponent from './app-input-field.component';
 

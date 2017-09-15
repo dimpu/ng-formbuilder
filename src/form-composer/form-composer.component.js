@@ -1,12 +1,11 @@
 import template from './form-composer.html';
 import controller from './form-composer.controller';
-import './form-composer.css';
+import './form-composer.scss';
 
-let formComposerComponent = function () {
-    return {
+let formComposerComponent = {
         template,
         controller
-    };
+    
 };
 
 export default formComposerComponent;

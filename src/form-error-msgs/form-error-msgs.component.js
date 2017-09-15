@@ -6,13 +6,10 @@ let formErrorMsgsComponent = function () {
     return {
         template,
         controller,
-        restrict: 'E',
-        controllerAs: 'vm',
         replace: true,
-        scope: {
+        bindings: {
             fieldName: '='
-        },
-        bindToController: true
+        }
     };
 };
 

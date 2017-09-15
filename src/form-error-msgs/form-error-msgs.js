@@ -1,8 +1,9 @@
+import angular from 'angular';
 import FormErrorMsgsComponent from './form-error-msgs.component';
 
 let formErrorMsgsModule = angular.module('form-error-msgs', [
         'ngMessages'
     ])
-    .directive('formErrorMsgs', FormErrorMsgsComponent);
+    .component('formErrorMsgs', FormErrorMsgsComponent);
 
 export default formErrorMsgsModule;
