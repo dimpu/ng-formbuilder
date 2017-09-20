@@ -1,8 +1,13 @@
 // import index from './index.html';
 import './scss/index.scss';
-import './form-composer/form-composer';
+// import './form-composer/form-composer';
 
-console.log("HI");
+let hi = ()=>{
+    return 'hi';
+}
+
+console.log(hi());
+
 // var html = document.createElement('html');
 // html.innerHTML = index;
 // var head = html.getElementsByTagName('head')[0].innerHTML;
