@@ -1,11 +1,11 @@
 import angular from 'angular';
-// // import '@uirouter/angularjs';
+import '@uirouter/angularjs';
 import FormComposerComponent from './form-composer.component';
 import FormBuilder from '../form-builder';
 
 let formComposerModule = angular.module('form-composer', [
         FormBuilder.name
-        // 'ui.router'
+        'ui.router'
     ])
     // uncomment this foo rute
     // .config(($stateProvider, $urlRouterProvider)=>{
@@ -25,6 +25,6 @@ let formComposerModule = angular.module('form-composer', [
  * Instead, we need to bootstrap the application manually
  */
 
-  angular.element(function() {
-    angular.bootstrap(document, [formComposerModule.name]);
-  });
+  // angular.element(function() {
+  //   angular.bootstrap(document, [formComposerModule.name]);
+  // });
