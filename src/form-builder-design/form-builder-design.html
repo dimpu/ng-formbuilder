@@ -5,7 +5,7 @@
             ng-repeat="field in $ctrl.formJson.fields" 
             dnd-moved="$ctrl.formJson.fields.splice($index, 1)"
             dnd-selected="models.selected = ''; models.selected = field"
-            ng-class="{'selected': models.selected === field}"
+            ng-class="{'selected': $ctrl.selectedField === field}"
             >
             <dnd-nodrag>
                 <div dnd-handle class="handle">:::</div>

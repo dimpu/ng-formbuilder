@@ -3,6 +3,4 @@ class FormBuilderController {
 		this.name = 'form-builder';
 	}
 }
-
-
 export default FormBuilderController;

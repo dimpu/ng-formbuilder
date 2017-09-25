@@ -12,7 +12,7 @@
                     </uib-tab-heading>
                 </uib-tab>
                 <uib-tab heading="Design" class="active">
-                    <form-builder-design form-json="$ctrl.formJson"></form-builder-design>
+                    <form-builder-design form-json="$ctrl.formJson" selected-field="$ctrl.selectedField"></form-builder-design>
                 </uib-tab>
                 <uib-tab heading="Preview">
                     <form-builder form-json="$ctrl.formJson"></form-builder>
@@ -20,7 +20,7 @@
             </uib-tabset>
         </div>
         <div ui-layout-container size="324px">
-            <edit-field-props></edit-field-props>
+            <edit-field-props selected-field="$ctrl.selectedField"></edit-field-props>
         </div>
     </div>
 </div>

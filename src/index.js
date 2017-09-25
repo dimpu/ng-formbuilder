@@ -3,12 +3,14 @@ import './scss/index.scss';
 import '@uirouter/angularjs';
 // import formCompose from './form-composer/form-composer';
 import formComposer from './form-composer/form-composer';
-// import formsDashboard from './forms-dashboard/forms-dashboard'; 
-
+import formsDashboard from './forms-dashboard/forms-dashboard'; 
+import FormViewModule from './form-view/form-view';
 
     angular.module('ngForms', [
         'ui.router',
-        formComposer.name 
+        // formsDashboard.name,
+        formComposer.name,
+        // FormViewModule.nadme 
     ]);
 
 
@@ -16,7 +18,7 @@ import formComposer from './form-composer/form-composer';
 //     return 'hi';
 // }
 
-console.log('hi');
+// console.log('hi');
 
 // let formComposerModule = angular
 // .module('my-app', ['ui.router'])

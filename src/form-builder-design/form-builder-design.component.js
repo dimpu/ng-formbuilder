@@ -6,6 +6,7 @@ let formBuilderDesignComponent = {
 		template,
 		controller,
 		bindings: {
+			selectedField : '=',
 			formJson: '=', //field definition
 	}
 };
