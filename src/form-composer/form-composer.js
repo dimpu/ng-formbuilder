@@ -1,30 +1,43 @@
 import angular from 'angular';
 import '@uirouter/angularjs';
+import 'angular-ui-layout';
+
+import accordion from 'angular-ui-bootstrap/src/accordion';
+import tabs from 'angular-ui-bootstrap/src/tabs';
+// app components
+import AppHeader from '../common/app-header/app-header';
 import FormComposerComponent from './form-composer.component';
-import FormBuilder from '../form-builder';
+import FormBuilderDesignModule from '../form-builder-design/form-builder-design';
+import FormBuilder from '../form-builder/form-builder';
+import FiledsWidgetModule from '../fields-widget/fields-widget';
+import EditFieldPropsModule from '../edit-field-props/edit-field-props';
+
+// atoms
+import AppWidgetSearchModule from '../atoms/app-widget-search/app-widget-search';
 
 let formComposerModule = angular.module('form-composer', [
-        FormBuilder.name
-        'ui.router'
-    ])
-    // uncomment this foo rute
-    // .config(($stateProvider, $urlRouterProvider)=>{
-    // 	$urlRouterProvider.otherwise('/');
+        'ui.router',
+        'ui.layout',
+        tabs,       
+        accordion,
+        AppHeader.name,
+        AppWidgetSearchModule.name,
+        FormBuilder.name,
+        FormBuilderDesignModule.name,
+        FiledsWidgetModule.name,
+        EditFieldPropsModule.name
 
-    // 	$stateProvider
-    // 		.state('form-composer', {
-    // 			url: '/',
-    // 			template: '<form-composer></form-composer>'
-    // 		});
-    // })
+    ])
+    // uncomment this foor rute
+    .config(($stateProvider, $urlRouterProvider) => {
+        $urlRouterProvider.otherwise('/');
+
+        $stateProvider
+            .state('form-composer', {
+                url: '/form/:id',
+                template: '<form-composer></form-composer>'
+            });
+    })
     .component('formComposer', FormComposerComponent);
 
-    /*
- * As we are using ES6 with Angular 1.x we can't use ng-app directive
- * to bootstrap the application as modules are loaded asynchronously.
- * Instead, we need to bootstrap the application manually
- */
-
-  // angular.element(function() {
-  //   angular.bootstrap(document, [formComposerModule.name]);
-  // });
+export default formComposerModule;

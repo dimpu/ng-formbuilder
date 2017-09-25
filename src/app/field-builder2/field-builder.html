@@ -1,0 +1,9 @@
+<div class="field-settings col-xs-{{$ctrl.field.columnsize}}">
+    <div ng-switch="$ctrl.field.type">
+        <app-input-field ng-switch-default field="$ctrl.field" form-name="$ctrl.formName" form-data="$ctrl.formData"></app-input-field>
+        <app-checkbox-field ng-switch-when="checkbox" field="$ctrl.field" form-name="$ctrl.formName" form-data="$ctrl.formData"></app-checkbox-field>
+        <app-radio-field ng-switch-when="radio" field="$ctrl.field" form-name="$ctrl.formName" form-data="$ctrl.formData"></app-radio-field>
+        <app-select-field ng-switch-when="select" field="$ctrl.field" form-name="$ctrl.formName" form-data="$ctrl.formData"></app-select-field>
+        <app-textarea-field ng-switch-when="textarea" field="$ctrl.field" form-name="$ctrl.formName" form-data="$ctrl.formData"></app-textarea-field>
+    </div>
+</div>

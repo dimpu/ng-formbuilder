@@ -1,0 +1,124 @@
+form-composer {
+    display: block;
+    height: 100%;
+    .composer-canvas {
+        position: relative;
+        display: block;
+        height: calc(100% - 51px);
+    }
+
+    .ui-layout-column > .ui-splitbar {
+        background: #101010;
+        // a {
+        //     display: none !important;
+
+        // }
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: 1px;
+            margin-top: -6px;
+            background-color: #838383;
+            width: 2px;
+            height: 50px;
+            border-radius: 4px;
+        }
+    }
+
+    .nav-tabs {
+        background: #292929;
+        li a {
+            background: 0 0;
+            display: inline-block;
+            color: #9f9e9e;
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 13px;
+            border-radius: 0;
+            padding: 7px 10px;
+            border: 1px solid transparent;
+            border-top: 2px solid transparent;
+            line-height: 18px;
+            min-height: auto;
+        }
+        li.active a {
+            background-color: #3f3f3f;
+            border: 0;
+            border-top: 2px solid #1794ef;
+            color: #f5f3f3;
+            &:hover {
+                color: #555;
+                cursor: default;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-bottom-color: transparent;
+            }
+        }
+    }
+}
+
+
+
+.fields-list-container {
+    padding:  0 15px;
+    .sub-group {
+        &-name {
+            display: inline-block;
+            max-width: 100%;
+            margin-bottom: 5px;
+            padding:10px;
+        }
+        .field-widget {
+            position: relative;
+            display: inline-block;
+            width: 90px;
+            height: 82px;
+            margin: 1px;
+            padding-top: 15px;
+            text-align: center;
+            color: #949393;
+            background-color: #333;
+        }
+        .design-tool-icon {
+            font-size: 32px;
+            width: 32px;
+            height: 32px;
+            display: inline-block;
+        }
+        .design-tool-name {
+            text-transform: capitalize;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 5px 0 0;
+        }
+        ol {
+            padding: 0;
+        }
+    }
+}
+
+
+.expand-collapse-toolbar {
+        width: 25px;
+        border: none;
+        box-shadow: none;
+        background-color: #171717;
+        padding: 0 10px 0 0;
+        height: 36px;
+        margin: 0;
+        a:hover {
+            background: transparent;
+        }
+    i {
+        margin: 0 -1px 0 0;
+        background-color: #404040;
+        padding: 0;
+        // height: 19px;
+        width: 16px;
+        font-size: 8px;
+        line-height: 19px;
+        border-radius: 2px;
+    }
+}
+

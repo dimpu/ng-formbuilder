@@ -1,0 +1,15 @@
+<form novalidate name="NFB" dnd-list="$ctrl.formJson.fields">
+        <div class="f-list" 
+            dnd-draggable="field" 
+            dnd-effect-allowed="move"
+            ng-repeat="field in $ctrl.formJson.fields" 
+            dnd-moved="$ctrl.formJson.fields.splice($index, 1)"
+            dnd-selected="models.selected = ''; models.selected = field"
+            ng-class="{'selected': models.selected === field}"
+            >
+            <dnd-nodrag>
+                <div dnd-handle class="handle">:::</div>
+                <field-builder form-name="NFB" field="field"></field-builder>
+            </dnd-nodrag>
+        </div>
+    </form>

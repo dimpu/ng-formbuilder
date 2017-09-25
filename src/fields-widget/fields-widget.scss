@@ -1,0 +1,37 @@
+fields-widget {
+    .widget-accord {
+        height: 100%;
+        background-color: #404040;
+        border-left: 1px #333 solid;
+        uib-accordion {
+            display: block;
+            height: 100%;
+        }
+        [uib-accordion-group],
+        .panel-heading {
+            background: transparent;
+        }
+        .panel {
+            border-radius: 0;
+            border-color: #333;
+            border-top: 0;
+            .panel-title {
+                color: #bcbbbb;
+                a,
+                a:hover {
+                    text-decoration: none
+                }
+            }
+            .panel-body {
+                padding: 0;
+            }
+        }
+        .panel+.panel {
+            margin: 0;
+        }
+        .panel-default>.panel-heading+.panel-collapse>.panel-body {
+            border-top-color: #333;
+            background-color: #505050;
+        }
+    }
+}

@@ -1,7 +1,16 @@
 // import index from './index.html';
-// import './scss/index.scss';
+import './scss/index.scss';
 import '@uirouter/angularjs';
-// import './form-composer/form-composer';
+// import formCompose from './form-composer/form-composer';
+import formComposer from './form-composer/form-composer';
+// import formsDashboard from './forms-dashboard/forms-dashboard'; 
+
+
+    angular.module('ngForms', [
+        'ui.router',
+        formComposer.name 
+    ]);
+
 
 // let hi = ()=>{
 //     return 'hi';
@@ -9,24 +18,24 @@ import '@uirouter/angularjs';
 
 console.log('hi');
 
-let formComposerModule = angular
-.module('my-app', ['ui.router'])
-.config(($stateProvider, $urlRouterProvider)=>{
-    $urlRouterProvider.otherwise('/');
+// let formComposerModule = angular
+// .module('my-app', ['ui.router'])
+// .config(($stateProvider, $urlRouterProvider)=>{
+//     $urlRouterProvider.otherwise('/');
 
-    $stateProvider
-        .state('hi', {
-            url: '/',
-            template: '<hi></hi>'
-        });
-})
-.directive('hi', function() {
-    return {
-        template: '<h1>Dimpu ARvind</h1>'
-    }
-})
+//     $stateProvider
+//         .state('hi', {
+//             url: '/',
+//             template: '<hi></hi>'
+//         });
+// })
+// .directive('hi', function() {
+//     return {
+//         template: '<h1>Dimpu ARvind buddh</h1>'
+//     }
+// })
 // .component('hi', {
-//     template: '<h1>Dimpu Aravind</h1>'
+//     template: '<h1>Dimpu Aravind BUDDH Wooow</h1>'
 // }); 
 
 // uncomment this foo rute
