@@ -8,7 +8,7 @@ import FormViewModule from './form-view/form-view';
 
     angular.module('ngForms', [
         'ui.router',
-        // formsDashboard.name,
+        formsDashboard.name,
         formComposer.name,
         // FormViewModule.nadme 
     ]);

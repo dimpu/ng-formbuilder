@@ -2,13 +2,11 @@ import angular from 'angular';
 import '@uirouter/angularjs';
 import FieldBuilderComponent from './field-builder.component';
 
-
-import AppInputFieldModule from '../atoms/app-input-field/app-input-field';
-
+import AppFields from '../atoms/fields/fields';
 
 let fieldBuilderModule = angular.module('field-builder', [
         'ui.router',
-        AppInputFieldModule.name
+        AppFields.name
     ])
     /* // uncomment this foor rute
     .config(($stateProvider, $urlRouterProvider)=>{

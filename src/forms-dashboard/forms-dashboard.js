@@ -15,7 +15,7 @@ let formsDashboardModule = angular.module('forms-dashboard', [
 
     	$stateProvider
     		.state('forms', {
-    			url: '/',
+    			url: '/forms',
     			template: '<forms-dashboard></forms-dashboard>'
     		});
     })

@@ -1,0 +1,6 @@
+<div class="form-group" data-ng-class="{'active-field':$ctrl.field.active}" data-ng-click="on$ctrl.fieldClick()" data-ng-hide="$ctrl.field.hide">
+	<label for="{{$ctrl.field.name}}" class="control-label" data-ng-show="$ctrl.field.label">{{$ctrl.field.label || 'Undefined'}} <span class="text-danger" data-ng-show="$ctrl.field.validation.required">*</span></label>
+	<timepicker data-ng-model="$ctrl.formData[$ctrl.field.name]" hour-step="$ctrl.field.hstep" minute-step="$ctrl.field.mstep"
+	    show-meridian="$ctrl.field.ismeridian"></timepicker>
+	<form-error-msgs field-name="$ctrl.formName[$ctrl.field.name]"></form-error-msgs>
+</div>

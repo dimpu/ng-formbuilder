@@ -1,0 +1,16 @@
+{
+    "name": "Text",
+    "icon": "text",
+    "json": {
+        "type": "text",
+        "label": "Text",
+        "name": "text_",
+        "placeholder": "Enter your text!",
+        "validate": {
+            "require": "false",
+            "minlenght": "undefined",
+            "maxlenght": "undefined"
+        },
+        "columnsize": 12
+    }
+}

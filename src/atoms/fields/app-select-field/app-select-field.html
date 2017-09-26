@@ -1,0 +1,14 @@
+<div class="form-group" data-ng-class="{'active-field':$ctrl.field.active}" data-ng-hide="$ctrl.field.hide">
+    <label for="{{$ctrl.field.name}}" class="control-label">{{$ctrl.field.label || "undefined"}}</label>
+    <select ng-if="!$ctrl.field.multi" class="form-control" name="{{$ctrl.field.name}}" ng-model="$ctrl.formData[$ctrl.field.name]"
+        ng-change="$ctrl.onChange(data)" data-ng-disabled="$ctrl.field.disable">
+      <option data-ng-selected="'true'" value="">{{$ctrl.field.placeholder}}</option>
+      <option value="{{item.value}}" data-ng-repeat="item in $ctrl.options">{{item.label}}</option>
+    </select>
+
+    <select ng-if="$ctrl.field.multi" multiple class="form-control" name="{{$ctrl.field.name}}" ng-model="$ctrl.formData[$ctrl.field.name]"
+        ng-change="onChange(data)" data-ng-disabled="$ctrl.field.disable">
+      <option value="{{item.value}}" data-ng-repeat="item in $ctrl.items">{{item.label}}</option>
+    </select>
+    <form-error-msgs field-name="$ctrl.formName[$ctrl.field.name]"></form-error-msgs>
+</div>
