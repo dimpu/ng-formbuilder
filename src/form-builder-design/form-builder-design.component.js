@@ -8,7 +8,8 @@ let formBuilderDesignComponent = {
 		bindings: {
 			selectedField : '=',
 			formJson: '=', //field definition
-			formData: '='
+			formData: '=',
+			onFieldSelect: '&'
 	}
 };
 

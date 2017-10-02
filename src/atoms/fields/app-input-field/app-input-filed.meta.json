@@ -1,0 +1,172 @@
+[{
+        "name": "Text",
+        "icon": "fa-text-width",
+        "json": {
+            "type": "text",
+            "label": "Text",
+            "name": "text_",
+            "placeholder": "Enter your text!",
+            "validate": {
+                "require": "false",
+                "minlenght": "undefined",
+                "maxlenght": "undefined"
+            },
+            "columnsize": 12
+        }
+    },
+    {
+        "name": "Email",
+        "icon": "fa-envelope-o ",
+        "json": {
+            "type": "email",
+            "label": "Email",
+            "name": "email_",
+            "placeholder": "Enter your text!",
+            "validate": {
+                "require": "false",
+                "minlenght": "undefined",
+                "maxlenght": "undefined"
+            },
+            "columnsize": 12
+        }
+    },
+
+    {
+        "name": "Phone",
+        "icon": "fa-phone ",
+        "json": {
+            "type": "tel",
+            "label": "Phone",
+            "name": "tel_",
+            "placeholder": "Enter your text!",
+            "validate": {
+                "require": "false",
+                "minlenght": "undefined",
+                "maxlenght": "undefined"
+            },
+            "columnsize": 12
+        }
+    },
+
+
+    {
+        "name": "Time",
+        "icon": "fa-clock-o ",
+        "json": {
+            "type": "time",
+            "label": "Time",
+            "name": "time_",
+            "placeholder": "Enter your text!",
+            "validate": {
+                "require": "false",
+                "minlenght": "undefined",
+                "maxlenght": "undefined"
+            },
+            "columnsize": 12
+        }
+    },
+    
+    {
+        "name": "Color",
+        "icon": "fa-paint-brush",
+        "json": {
+            "type": "color",
+            "label": "Color",
+            "name": "color_",
+            "placeholder": "Enter your text!",
+            "validate": {
+                "require": "false",
+                "minlenght": "undefined",
+                "maxlenght": "undefined"
+            },
+            "columnsize": 12
+        }
+    }
+    
+    ,{
+        "name": "Date Time",
+        "icon": "fa-calendar",
+        "json": {
+            "type": "datetime",
+            "label": "Date time",
+            "name": "datetime_",
+            "placeholder": "Enter your text!",
+            "validate": {
+                "require": "false",
+                "minlenght": "undefined",
+                "maxlenght": "undefined"
+            },
+            "columnsize": 12
+        }
+    }, {
+        "name": "Month",
+        "icon": "fa-calendar-o",
+        "json": {
+            "type": "month",
+            "label": "Month",
+            "name": "month_",
+            "placeholder": "Enter Month",
+            "validate": {
+                "require": "false",
+                "minlenght": "undefined",
+                "maxlenght": "undefined"
+            },
+            "columnsize": 12
+        }
+    }, {
+        "name": "Range",
+        "icon": "fa-window-minimize",
+        "json": {
+
+            "type": "range",
+            "label": "Range",
+            "name": "range_",
+            "placeholder": "Enter Month",
+            "validate": {
+                "require": "false",
+                "minlenght": "undefined",
+                "maxlenght": "undefined"
+            },
+            "columnsize": 12
+        }
+    },
+
+    {
+        "name": "Week",
+        "icon": "fa-calendar-o",
+        "json": {
+            "type": "week",
+            "label": "Week",
+            "name": "week_",
+            "placeholder": "Enter Month",
+            "validate": {
+                "require": "false",
+                "minlenght": "undefined",
+                "maxlenght": "undefined"
+            },
+            "columnsize": 12
+        }
+    },
+
+    {
+        "name": "Url",
+        "icon": "fa-globe",
+        "json": {
+            "type": "url",
+            "label": "url",
+            "name": "url_",
+            "placeholder": "Enter Url",
+            "validate": {
+                "require": "false",
+                "minlenght": "undefined",
+                "maxlenght": "undefined"
+            },
+            "columnsize": 12
+        }
+    }
+
+
+
+
+
+]

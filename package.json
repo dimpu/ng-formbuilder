@@ -56,9 +56,11 @@
   "dependencies": {
     "@uirouter/angularjs": "^1.0.6",
     "angular": "^1.6.6",
+    "angular-auth0": "^2.0.0",
     "angular-drag-and-drop-lists": "^2.1.0",
     "angular-ui-bootstrap": "^2.5.0",
     "angular-ui-layout": "^1.4.3",
-    "angular-ui-sortable": "^0.17.2"
+    "angular-ui-sortable": "^0.17.2",
+    "ng-redux": "^3.5.2"
   }
 }

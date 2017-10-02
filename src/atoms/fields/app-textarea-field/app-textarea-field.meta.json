@@ -1,0 +1,17 @@
+{
+        "name": "Textarea",
+        "icon": "fa-text-width",
+        "json": {
+            "type": "textarea",
+            "label": "Textarea",
+            "name": "textarea_",
+            "placeholder": "Enter your details",
+            "validate": {
+              "require": "false",
+              "minlenght": "undefined",
+              "maxlenght": "undefined"
+            },
+            "columnsize": 12
+          }
+    }
+    

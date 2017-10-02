@@ -1,0 +1,8 @@
+// {
+//     "clientID": "w8scDeCdHUIKpjSFw7qlWlIDJRx0IkOU",
+//     "domain": "techumber.auth0.com",
+//     "responseType": "token id_token",
+//     "audience": "https://techumber.auth0.com/userinfo",
+//     "redirectUri": "http://localhost:3000/callback",
+//     "scope": "openid"
+//   }

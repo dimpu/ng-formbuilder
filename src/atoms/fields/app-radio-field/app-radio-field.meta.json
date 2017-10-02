@@ -1,0 +1,16 @@
+{
+    "name": "Radio",
+    "icon": " fa-toggle-on",
+    "json": {
+        "type": "radio",
+        "label": "Radio",
+        "name": "radio_",
+        "default": "",
+        "inline": "false",
+        "columnsize": 12,
+        "items": [{
+          "label": "Radio",
+          "value": "radio"
+        }]
+      }
+}

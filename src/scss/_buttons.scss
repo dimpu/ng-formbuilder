@@ -1,0 +1,22 @@
+.app {
+    &--btn {
+        width: 95px;
+        height: 28px;
+        color: #fff;
+        background-color: #a09f9f;
+        text-align: center;
+        padding: 5px 10px;
+        margin-right: 5px;
+        border-radius: 2px; 
+        display: inline-block;
+        line-height: 3px !important;
+        &:hover {
+            text-decoration: none;
+            background-color: #eee;
+        }
+        &__primary {
+            background-color: #1794ef;
+        }
+    }
+}
+

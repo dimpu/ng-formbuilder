@@ -1,0 +1,14 @@
+{
+    "name": "Checkbox",
+    "icon": "fa-check-square ",
+    "json": {
+        "type": "checkbox",
+        "label": "Checkbox",
+        "name": "chackbox_",
+        "columnsize": 12,
+        "items": [{
+          "label": "Checkbox",
+          "value": "checkbox"
+        }]
+      }
+}
