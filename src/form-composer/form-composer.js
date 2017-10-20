@@ -11,6 +11,7 @@ import FormBuilderDesignModule from '../form-builder-design/form-builder-design'
 import FormBuilder from '../form-builder/form-builder';
 import FiledsWidgetModule from '../fields-widget/fields-widget';
 import EditFieldPropsModule from '../edit-field-props/edit-field-props';
+import FormSettingsModule from '../form-settings/form-settings';
 
 // atoms
 import AppWidgetSearchModule from '../atoms/app-widget-search/app-widget-search';
@@ -25,8 +26,8 @@ let formComposerModule = angular.module('form-composer', [
         FormBuilder.name,
         FormBuilderDesignModule.name,
         FiledsWidgetModule.name,
-        EditFieldPropsModule.name
-
+        EditFieldPropsModule.name,
+        FormSettingsModule.name
     ])
     // uncomment this foor rute
     .config(($stateProvider, $urlRouterProvider) => {

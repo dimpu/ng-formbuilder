@@ -7,15 +7,18 @@
         <div ui-layout-container>
             <uib-tabset active="1">
                 <uib-tab class="expand-collapse-toolbar">
-                    <uib-tab-heading>
+                    <!-- <uib-tab-heading>
                         <i class="fa fa-angle-double-left" aria-hidden="true"></i>
-                    </uib-tab-heading>
+                    </uib-tab-heading> -->
                 </uib-tab>
                 <uib-tab heading="Design" class="active">
                     <form-builder-design form-json="$ctrl.formJson"></form-builder-design>
                 </uib-tab>
                 <uib-tab heading="Preview">
                     <form-builder form-json="$ctrl.formJson"></form-builder>
+                </uib-tab>
+                <uib-tab heading="Settings">
+                    <form-settings></form-settings>
                 </uib-tab>
             </uib-tabset>
         </div>
