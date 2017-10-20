@@ -3,31 +3,21 @@
             <div uib-accordion-group class="panel-default" is-open="true">
                 <uib-accordion-heading>
                     Fields
-                    <i class="pull-left fa fa-angle-right" ng-class="{'fa-angle-down': status.open, 'fa-angle-right': !status.open}"></i>
+                    <i class="pull-left fa" ng-class="{'fa-angle-down': status.open, 'fa-angle-right': !status.open}"></i>
                 </uib-accordion-heading>
                 <div class="pane-content">
-                    <app-widget-search></app-widget-search>
+                    <app-widget-search ></app-widget-search>
                     <div class="fields-list-container">
                         <div class="sub-group">
                             <label class="sub-group-name">Basic fields</label>
-                            <ol>
-                                <li class="field-widget">
-                                    <i class="fa fa-text-width design-tool-icon" aria-hidden="true"></i>
-                                    <p ng-if="group.name !== 'prefabs'" class="design-tool-name">Button</p>
-                                </li>
-                                <li class="field-widget">
-                                    <i class="fa fa-text-width design-tool-icon" aria-hidden="true"></i>
-                                    <p ng-if="group.name !== 'prefabs'" class="design-tool-name">Button</p>
-                                </li>
-
-                                <li class="field-widget">
-                                    <i class="fa fa-text-width design-tool-icon" aria-hidden="true"></i>
-                                    <p ng-if="group.name !== 'prefabs'" class="design-tool-name">Button</p>
-                                </li>
-
-                                <li class="field-widget">
-                                    <i class="fa fa-text-width design-tool-icon" aria-hidden="true"></i>
-                                    <p ng-if="group.name !== 'prefabs'" class="design-tool-name">Button</p>
+                            <ol dnd-list="list">
+                                <li 
+                                dnd-draggable="field.json"
+                                dnd-effect-allowed="move"
+                                dnd-copied = "field.id = field.id + 1"
+                                class="field-widget" ng-repeat="field in $ctrl.fields track by $index ">
+                                    <i class="fa design-tool-icon {{field.icon}}" aria-hidden="true"></i>
+                                    <p ng-if="group.name !== 'prefabs'" class="design-tool-name">{{field.name}}</p>
                                 </li>
                             </ol>
                         </div>
@@ -36,7 +26,18 @@
             </div>
             <div uib-accordion-group class="panel-default">
                 <uib-accordion-heading>
-                    Subforms <i class="pull-left fa fa-angle-right" ng-class="{'fa-angle-down': status.open, 'fa-angle-right': !status.open}"></i>
+                    Custom Fields <i class="pull-left fa " ng-class="{'fa-angle-down': status.open, 'fa-angle-right': !status.open}"></i>
+                </uib-accordion-heading>
+                <div class="pane-content">
+                    <app-widget-search></app-widget-search>
+                    This is just some content to illustrate fancy headings.
+                </div>
+
+            </div>
+
+            <div uib-accordion-group class="panel-default">
+                <uib-accordion-heading>
+                    Subforms <i class="pull-left fa" ng-class="{'fa-angle-down': status.open, 'fa-angle-right': !status.open}"></i>
                 </uib-accordion-heading>
                 <div class="pane-content">
                     <app-widget-search></app-widget-search>

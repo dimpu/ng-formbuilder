@@ -4,12 +4,12 @@
             dnd-effect-allowed="move"
             ng-repeat="field in $ctrl.formJson.fields" 
             dnd-moved="$ctrl.formJson.fields.splice($index, 1)"
-            dnd-selected="models.selected = ''; models.selected = field"
-            ng-class="{'selected': models.selected === field}"
+            dnd-selected="$ctrl.selectedField = ''; $ctrl.selectedField = field; $ctrl.onFieldSelect(field);"
+            ng-class="{'selected': $ctrl.selectedField === field}"
             >
             <dnd-nodrag>
                 <div dnd-handle class="handle">:::</div>
-                <field-builder form-name="NFB" field="field"></field-builder>
+                <field-builder form-name="NFB" field="field" form-data="$ctrl.formData"></field-builder>
             </dnd-nodrag>
         </div>
     </form>

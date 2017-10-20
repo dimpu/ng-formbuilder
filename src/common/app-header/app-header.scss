@@ -1,3 +1,10 @@
+.navbar li a {
+    text-shadow: 0 0 0 #000;
+    &:hover {
+        background: transparent;
+    }
+}
+
 app-header {
     display: block;
     .navbar {
@@ -6,7 +13,25 @@ app-header {
     .navbar{
         margin-bottom: 0;
     }
-    .navbar:first-child {
+    .navbar-brand {
+        padding: 0;
+        text-shadow: 0 0 0 black;
+        &:hover {
+            cursor: pointer;
+        }
+        .menu-name {
+            margin-left: 10px;
+            font-weight: 600;
+            display: inline-block;
+            padding: 15px 20px;
+            font-size: 16px;
+            color: #b2b2b2;
+            height: 48px;
+            cursor: default;
+            text-transform: capitalize;
+        }
+    }
+    .navbar.app--header {
         background-color: #101010;
         border-radius: 0;
         font-size: 1em;
@@ -26,7 +51,7 @@ app-header {
         color: #1794ef;
     }
 
-    .second-nav {
+    .app--nav{
         &.navbar {
             min-height: 36px;
             border: 0;
@@ -34,6 +59,7 @@ app-header {
             border-radius: 0;
             li>a {
                 padding: 7px;
+                color: #f5f3f3;
             }
             li.active a {
                 background-color: #3f3f3f;
@@ -45,6 +71,25 @@ app-header {
         padding-left: 20px;
         padding-right: 20px;
         height: 36px;
+    }
+
+
+    .forms--sub-nav {
+        padding: 0 20px;
+        border-bottom: 1px rgba(0,0,0,.1) solid;
+        background-color: #fff;
+        min-height: auto;
+        li > a {
+            padding: 10px;
+        }
+    }
+
+    .forms--actions {
+        border-bottom: 1px rgba(0,0,0,.1) solid;
+        background-color: #e3e2e3;
+        padding: 10px 20px;
+        height: 48px;
+
     }
 
     

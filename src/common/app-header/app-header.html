@@ -1,24 +1,52 @@
 <header class="forms-dashboard">
-    <nav class="navbar navbar-inverse">
-        <a class="navbar-brand logo" href="/">FB</a>
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="#">Forms</a>
-            </li>
-            <!-- <li>
-                <a href="#">Link</a>
-            </li> -->
-        </ul>
-    </nav>
+
 </header>
 
-<!-- <nav class="navbar navbar-inverse second-nav">
+<nav class="navbar app--header">
+    <a class="navbar-brand" href="/">
+        <span class="logo">FB</span>
+        <span class="menu-name">Forms</span>
+    </a>
+</nav>
+
+
+<nav class="navbar app--nav">
     <ul class="nav navbar-nav">
         <li class="active">
             <a href="#">Forms</a>
         </li>
         <li>
-            <a href="#">Create</a>
+            <a href="#" ng-click="$ctrl.openCreateFormModal()">Fields</a>
         </li>
     </ul>
-</nav> -->
+</nav>
+
+
+
+
+
+<div class="navbar forms--sub-nav">
+    <ul class="nav navbar-nav">
+        <li class="active">
+            <a href="#">My Forms</a>
+        </li>
+        <li>
+            <a href="#">Templates</a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="navbar forms--actions ">
+    <ul class="nav navbar-nav">
+        <li class="active">
+            <a class="app--btn app--btn__primary" href="#">Create</a>
+        </li>
+        <li>
+            <a class="app--btn" href="#">Import</a>
+        </li>
+    </ul>
+</div>
+
+
+<create-form></create-form>

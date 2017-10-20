@@ -1,5 +1,6 @@
 class FormBuilderDesignController {
 	constructor(){
+		this.selectedField = null;
 		this.name = 'form-builder-design';
 	}
 }

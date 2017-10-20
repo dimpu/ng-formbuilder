@@ -7,6 +7,7 @@ let formBuilderComponent = {
     controller,
     bindings: {
         formJson: '=', //field definition
+        formData: '='
     }
 
 };
