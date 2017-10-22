@@ -10,7 +10,7 @@ import formComposer from './form-composer/form-composer';
 import formsDashboard from './forms-dashboard/forms-dashboard'; 
 import FormViewModule from './form-view/form-view';
 import AppLogin from './pages/app-login/app-login';
-// import AppConfig from './config/config';
+import AppConfig from './config/config';
 
     angular.module('ngForms', [
         ngRedux,
@@ -18,6 +18,6 @@ import AppLogin from './pages/app-login/app-login';
         formsDashboard.name,
         formComposer.name,
         AppLogin.name,
-        // AppConfig.name
+        AppConfig.name
         // FormViewModule.nadme 
     ]);
