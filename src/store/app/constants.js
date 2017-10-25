@@ -1,0 +1,1 @@
+export const ADD_FIED_TO_FORM = 'ADD_FIED_TO_FORM';
