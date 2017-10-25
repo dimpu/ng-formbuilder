@@ -15,7 +15,7 @@
                                 dnd-draggable="field.json"
                                 dnd-effect-allowed="move"
                                 dnd-copied = "field.id = field.id + 1"
-                                class="field-widget" ng-repeat="field in $ctrl.fields track by $index ">
+                                class="field-widget" ng-repeat="field in $ctrl.fieldTypes track by $index ">
                                     <i class="fa design-tool-icon {{field.icon}}" aria-hidden="true"></i>
                                     <p ng-if="group.name !== 'prefabs'" class="design-tool-name">{{field.name}}</p>
                                 </li>
@@ -24,7 +24,7 @@
                     </div>
                 </div>
             </div>
-            <div uib-accordion-group class="panel-default">
+            <!-- <div uib-accordion-group class="panel-default">
                 <uib-accordion-heading>
                     Custom Fields <i class="pull-left fa " ng-class="{'fa-angle-down': status.open, 'fa-angle-right': !status.open}"></i>
                 </uib-accordion-heading>
@@ -43,6 +43,6 @@
                     This is just some content to illustrate fancy headings.
                 </div>
 
-            </div>
+            </div> -->
         </uib-accordion>
     </div>

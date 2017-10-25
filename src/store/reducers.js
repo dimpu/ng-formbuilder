@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import userReducer from './user/reducer';
-import appReducer from './app/reducer';
+// import userReducer from './user/reducer';
+// import app from './app/reducers';
+import fieldTypes from './field-type/reducers';
+
 
 export default combineReducers({
-  app: appReducer,
-  user: userReducer
+  // app,
+  fieldTypes 
 });

@@ -17,21 +17,22 @@
 // }
 
 
-function reducers(state , action) {
-  switch(action.type) {
-    case 'INCREESE':
-      return state +1;
-    case 'DECREESE':
-      return state -1;
-    default:
-      return state;
-  }
-}
+// function reducers(state , action) {
+//   switch(action.type) {
+//     case 'INCREESE':
+//       return state +1;
+//     case 'DECREESE':
+//       return state -1;
+//     default:
+//       return state;
+//   }
+// }
 
 import angular from 'angular';
 import ngRedux from 'ng-redux';
 import { createLogger } from 'redux-logger';
 
+import reducers  from './reducers';
 
 const logger = createLogger({  
   level: 'info',
@@ -40,8 +41,6 @@ const logger = createLogger({
 
 export default angular.module('appStore', [ngRedux])
 .config(($ngReduxProvider) => {
-  
-
   $ngReduxProvider
     .createStoreWith(reducers, [logger], [window.__REDUX_DEVTOOLS_EXTENSION__()]);
 });
