@@ -63,6 +63,7 @@
     "angular-ui-sortable": "^0.17.2",
     "ng-redux": "^3.5.2",
     "redux": "^3.7.2",
-    "redux-actions": "^2.2.1"
+    "redux-actions": "^2.2.1",
+    "redux-logger": "^3.0.6"
   }
 }

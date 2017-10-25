@@ -1,0 +1,18 @@
+ {
+  "form_name":"Settings",
+  "fields":[
+    {
+      "type": "text",
+      "label": "Form Name",
+      "name": "form_name",
+      "placeholder": "Enter form name!",
+      "validate": {
+        "require": "false",
+        "minlenght": "2",
+        "maxlenght": "120"
+      },
+      "columnsize": 12
+    }
+  ]
+
+}
