@@ -25,7 +25,7 @@
 
 
 
-<div class="navbar forms--sub-nav">
+<div class="navbar forms--sub-nav" ng-show="$ctrl.showSubToolbar">
     <ul class="nav navbar-nav">
         <li class="active">
             <a href="#">My Forms</a>
@@ -37,7 +37,7 @@
 </div>
 
 
-<div class="navbar forms--actions ">
+<div class="navbar forms--actions " ng-show="$ctrl.showSubToolbar">
     <ul class="nav navbar-nav">
         <li class="active">
             <a class="app--btn app--btn__primary" href="#">Create</a>

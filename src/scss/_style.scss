@@ -1,0 +1,83 @@
+/**
+ * CoreUI - Open Source Bootstrap Admin Template
+ * @version v1.0.0-alpha.6
+ * @link http://coreui.io
+ * Copyright (c) 2017 creativeLabs Łukasz Holeczek
+ * @license MIT
+ */
+// Import normalize
+// @import "bootstrap/normalize";
+
+// Override Boostrap variables
+// @import "bootstrap-variables";
+
+// Import Bootstrap source files
+@import "bootstrap/bootstrap";
+
+
+
+.panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #c2cfd6;
+    border-radius: 0;
+    .panel-header {
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: #f0f3f5;
+        border-bottom: 1px solid #c2cfd6;
+    }
+}
+
+
+
+//forms
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.09375rem + 2px);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    color: #3e515b;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid #c2cfd6;
+    border-radius: 0;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    box-shadow: none;
+    &:focus {
+        color: #3e515b;
+        background-color: #fff;
+        border-color: #8ad4ee;
+        outline: none;
+    }
+}

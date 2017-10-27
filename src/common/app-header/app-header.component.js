@@ -4,7 +4,10 @@ import './app-header.scss';
 
 let appHeaderComponent = {
 		template,
-		controller
+		controller,
+		bindings: {
+			showSubToolbar: '<'
+		}
 };
 
 export default appHeaderComponent;

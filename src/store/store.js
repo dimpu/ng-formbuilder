@@ -1,6 +1,8 @@
 import angular from 'angular';
 import ngRedux from 'ng-redux';
 import { createLogger } from 'redux-logger';
+import thunk from 'redux-thunk';
+
 
 import reducers  from './reducers';
 
@@ -12,7 +14,7 @@ const logger = createLogger({
 export default angular.module('appStore', [ngRedux])
 .config(($ngReduxProvider) => {
   $ngReduxProvider
-    .createStoreWith(reducers, [logger], [window.__REDUX_DEVTOOLS_EXTENSION__()]);
+    .createStoreWith(reducers, [thunk, logger], [window.__REDUX_DEVTOOLS_EXTENSION__()]);
 });
 
 

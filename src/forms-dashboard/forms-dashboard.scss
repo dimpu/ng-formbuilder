@@ -5,9 +5,15 @@ forms-dashboard {
 
 .canvas-content {
     background: #f1f1f1;
+    height: calc(100% - 87px);
 }
 
 .forms-list {
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+
     li {
         display: inline-block;
         margin-right: 20px;

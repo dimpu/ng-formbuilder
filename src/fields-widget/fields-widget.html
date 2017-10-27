@@ -6,7 +6,7 @@
                     <i class="pull-left fa" ng-class="{'fa-angle-down': status.open, 'fa-angle-right': !status.open}"></i>
                 </uib-accordion-heading>
                 <div class="pane-content">
-                    <app-widget-search ></app-widget-search>
+                    <app-widget-search fields="$ctrl.fields"></app-widget-search>
                     <div class="fields-list-container">
                         <div class="sub-group">
                             <label class="sub-group-name">Basic fields</label>
