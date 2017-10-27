@@ -11,7 +11,7 @@ let appLoginModule = angular.module('app-login', [
 
     	$stateProvider
     		.state('app-login', {
-    			url: '/',
+                url: '/',
     			template: '<app-login></app-login>'
     		});
     })

@@ -14,8 +14,8 @@ const login = () => {
             .signInAnonymously()
             .then((data) => {
                 dispatch(userActions.userAuthorized());
-                // stateGo('forms');
-                // dispatch(fetchMessages());
+                dispatch(stateGo('forms', {}));
+                dispatch(fetchForms());
             });
     }
 }

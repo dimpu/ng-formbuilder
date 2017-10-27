@@ -5,6 +5,7 @@ import * as constants from './constants';
 const INITIAL_STATE = Immutable.fromJS([]);
 
 export default handleActions({
+    [constants.FETCH_FORMS]: (state, action) => state.forms,
     [constants.LOAD_ALL_FORMS]: (state, action) => state.forms
 }, INITIAL_STATE);
 

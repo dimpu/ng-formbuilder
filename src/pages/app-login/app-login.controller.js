@@ -2,7 +2,8 @@ import AuthActions from '../../store/auth/actions';
 
 class AppLoginController {
 
-    constructor($ngRedux) {
+    constructor($ngRedux, $state) {
+        this.$state = $state;
         this.unsubscribe = $ngRedux.connect(this.mapStateToThis, AuthActions)(this);
     }
 
