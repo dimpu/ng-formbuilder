@@ -1,7 +1,19 @@
+import AuthActions from '../../store/auth/actions';
+
 class AppLoginController {
-	constructor(){
-		this.name = 'app-login';
-	}
+
+    constructor($ngRedux) {
+        this.unsubscribe = $ngRedux.connect(this.mapStateToThis, AuthActions)(this);
+    }
+
+	mapStateToThis(state) {
+        return { };
+    }
+
+    ngOnDestroy() {
+        this.unsubscribe();
+    }
+
 }
 
 

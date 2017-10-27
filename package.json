@@ -61,11 +61,14 @@
     "angular-ui-bootstrap": "^2.5.0",
     "angular-ui-layout": "^1.4.3",
     "angular-ui-sortable": "^0.17.2",
+    "firebase": "^4.6.0",
     "immutable": "^3.8.2",
     "ng-redux": "^3.5.2",
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
     "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "redux-ui-router": "^0.7.2",
     "reselect": "^3.0.1"
   }
 }

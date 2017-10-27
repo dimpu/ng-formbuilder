@@ -1,15 +1,15 @@
-import { FieldTypeSelectors } from '../store/field-type';
-import FieldTypeActions from '../store/field-type/actions';
+import { BasicFieldTypeSelectors } from '../store/basic-field-type';
+import BasicFieldTypeActions from '../store/basic-field-type/actions';
 
 class FieldsWidgetController {
     constructor($ngRedux) {
         console.log(this);
-        this.unsubscribe = $ngRedux.connect(this.mapStateToThis, FieldTypeActions)(this);
+        this.unsubscribe = $ngRedux.connect(this.mapStateToThis, BasicFieldTypeActions)(this);
     }
 
     mapStateToThis(state) {
         return {
-            fieldTypes: FieldTypeSelectors.getFieldTypes(state).toJS()
+            fieldTypes: BasicFieldTypeSelectors.getBasicFieldTypes(state).toJS()
         };
     }
 

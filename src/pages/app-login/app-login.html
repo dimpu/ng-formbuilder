@@ -1,54 +1,27 @@
 <div class="app--login-page">
-    <header class="app--login-page--header">
-        <a href="" class="app--login-page--logo">
-            FormBuilder
-        </a>
-    </header>
 
-    <section class="app--login-page--content">
-        <div class="app--login-page--login-group">
-            
-            <div class="row">
+    <div class="container">
 
-            
-            <div class="panel panel-default app--login-page--login-panel col-xs-6">
+        <header class="app--login-page--header">
+            <a href="" class="app--login-page--logo">
+                FormBuilder
+            </a>
+        </header>
 
-                <div class="panel-body">
-                        <h3 class="panel-title">Login</h3>
-                    <form action="" method="POST" role="form">
-
-                        <div class="form-group">
-                            <label for="">label</label>
-                            <input type="text" class="form-control" id="" placeholder="Input field">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="">label</label>
-                            <input type="text" class="form-control" id="" placeholder="Input field">
-                        </div>
-
-
-
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </form>
+        <section class="app--login-page--content">
+            <div class="app--login-page--login-group">
+                <div class="g-row sign-in">
+                    <div class="g-col">
+                        <h1 class="sign-in__heading">Sign in</h1>
+                        <button class="sign-in__button" type="button" ng-click="$ctrl.login('github')">GitHub</button>
+                        <button class="sign-in__button" type="button">Google</button>
+                        <button class="sign-in__button" type="button">Twitter</button>
+                    </div>
                 </div>
+
             </div>
-            
-            <div class="panel panel-defualt app--login-page--social-panel col-xs-6">
-                  <div class="panel-body">
-                        <h3 class="panel-title">Panel title</h3>
-                        
-                        <button type="button" class="btn btn-primary active mt-3">Register Now!</button>
-                  </div>
-            </div>
+        </section>
 
-
-        </div>
-            
-        </div>
-
-
-
-    </section>
+    </div>
 
 </div>
