@@ -4,13 +4,7 @@ import * as constants from './constants';
 import * as fieldTypes from '../../atoms/fields/field-types';
 
 const INITIAL_STATE = Immutable.fromJS(
-  [
-    ...fieldTypes.input, 
-    fieldTypes.checkbox, 
-    fieldTypes.radio,
-    fieldTypes.textarea, 
-    fieldTypes.select
-  ]
+  Object.values(fieldTypes)
 );
 
 export default handleActions({

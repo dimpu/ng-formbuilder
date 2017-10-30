@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+
+
+<div class="container">
+    <div class="card card-accent-primary mt-5">
+        <div class="card-header">
+            <strong class="card-title">New Form</strong>
+        </div>
+        <div class="card-body">
+            <form-builder form-data="$ctrl.formData" form-json="$ctrl.formJson" on-submit="$ctrl.createForm($ctrl.formData)"></form-builder>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+            <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+         </div>
+    </div>
+</div>

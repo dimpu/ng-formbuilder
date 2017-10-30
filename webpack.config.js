@@ -65,6 +65,7 @@ module.exports = {
         //     title: 'Output Management'
         // })
     ],
+    devtool: 'source-map',
 
     devServer: {
         host: 'localhost',

@@ -1,7 +1,21 @@
+import FieldActions from '../store/fields/actions';
+
+
 class EditFieldPropsController {
-	constructor(){
-		this.name = 'edit-field-props';
-	}
+    constructor($ngStore) {
+        this.disconnect = $ngStore.connect(this.mapToState, FieldActions)(this);
+    }
+
+    mapToState() {
+        return {
+			fields: 
+		}
+    }
+
+    $ngDistroy() {
+        this.disconnect();
+    }
+
 }
 
 

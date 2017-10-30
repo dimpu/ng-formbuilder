@@ -1,0 +1,20 @@
+{
+    "user": {
+
+    },
+    "forms": [{
+        "id": "38aa56b2-814d-465e-ac46-4948319922ac",
+        "formName": "JobsBox" 
+    }],
+    "fields": {
+
+    },
+    "basicFieldType": {
+
+    },
+    "formTemplates": {
+
+    },
+    "selectFormId": "",
+    "selectFieldId": ""
+}

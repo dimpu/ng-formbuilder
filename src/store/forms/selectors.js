@@ -1,14 +1,20 @@
-import { createSelector } from 'reselect';
-import { Map } from 'immutable';
+import {
+    createSelector
+} from 'reselect';
+import {
+    Map
+} from 'immutable';
 
-const forms = state => state.forms;
-
+const formSelector = state => state.form
 // function which we will use to write our select logic
-const getForms = (forms) => forms;
+
+// const getForms = (forms) => forms;
+
+const getForms = createSelector(
+    formSelector,
+    forms => forms
+)
 
 export default {
-  getForms: createSelector(
-      forms,
-      getForms // last arugment is function
-    ) 
+    getForms: getForms
 }

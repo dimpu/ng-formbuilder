@@ -1,74 +1,58 @@
-<!-- <header class="forms-dashboard">
-    <nav class="navbar navbar-inverse">
-        <a class="navbar-brand logo" href="/">FB</a>
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="#">Forms</a>
-            </li>
-        </ul>
-    </nav>
-</header> -->
-
-<app-header></app-header>
-
+<app-header>
+</app-header>
 
 <div class="canvas-content">
-    <section role="main" class="forms-list-container container-fluid">
-        <ul class="forms-list row">
-            <li>
-                <div class="existing-form-overlay-hover">
-                    <div class="form-info-header">
+    <section role="main" class="container-fluid forms-list1">
+
+        <div class="row pt-3">
+            <div class="col-sm-3">
+                <div class="card add-form-card">
+                    <div class="card-body card-body text-center d-flex align-middle align-items-center justify-content-center">
+                        <a class="content" ui-sref="new-form">
+                            <label class="add">+</label>
+                            <p class="">Add</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3" ng-repeat="form in $ctrl.forms track by $index">
+                <div class="card">
+                    <div class="card-header">
                         <div class="form-type-container">
                             <span class="form-type application web">
                                 <i class="fa fa-television" aria-hidden="true"></i>
                                 <span class="ng-binding">Web</span>
                             </span>
                             <span class="form-authority pull-right">
-                                    <i class="fa fa-user-o" aria-hidden="true"></i>
-                                    <span class="text-capitalize ng-binding">owner</span>
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                                <span class="text-capitalize ng-binding">owner</span>
                             </span>
                         </div>
                     </div>
-                    <div class="form-info-body">
+                    <div class="card-body card-body text-center d-flex align-middle align-items-center justify-content-center">
                         <div class="form-title">
-                            <div class="form-img">
-                                <img ng-src="//dh2dw20653ig1.cloudfront.net/studio/9.0.0.3667/editor/generated/styles/provatars/default.png" src="//dh2dw20653ig1.cloudfront.net/studio/9.0.0.3667/editor/generated/styles/provatars/default.png">
-                            </div>
                             <div class="form-details">
-                                <a name="wm-form-JobsBox" ng-href="form.html#/WMPRJ2c91808957ff07230159056cca296073" title="JobsBox" class="form-link ng-binding" ng-click="$event.stopPropagation()" href="form.html#/WMPRJ2c91808957ff07230159056cca296073">JobsBox</a>
-                                <p class="excerpt ng-binding"></p>
+                                <a name="wm-form-JobsBox" ui-sref="form-composer({id:form.id})" title="{{form.formName}}" class="form-link">
+                                    <h1 class="card-title">
+                                        {{form.formName}}
+                                    </h1>
+                                </a>
                             </div>
                         </div>
-                        <div class="form-modified-info">
-                            <p class="date-time">
-                                <span class="last-modified-label ng-binding">Last Accessed</span>
-                                <span class="last-modified-time ng-binding">4 days ago</span>
-                            </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <p><i class="fa fa-eye" aria-hidden="true"></i> 1 View </p>
+                        <div class="form-operations">
+                            <button type="reset" class="btn btn-sm btn-danger" ng-click="$ctrl.confirmDeleteForm($index)">
+                                <i class="fa fa-trash"></i>
+                            </button>
                         </div>
                     </div>
-                    <a class="existing-form-overlay btn btn-transparent" ng-href="form.html#/WMPRJ2c91808957ff07230159056cca296073" href="form.html#/WMPRJ2c91808957ff07230159056cca296073">
-                        <label class="form-name-overlay ng-binding">JobsBox</label>
-                        <label class="open-in-studio ng-binding">Open in Studio
-                                <i class="wm-icon wms wms-angle-double-right"></i>
-                            </label>
-                    </a>
                 </div>
-                <div class="form-info-footer">
-                    <div class="form-member-details">
-                        <a name="wm-form-form-members" title="form Members" ng-click="openformMembersList(form)">
-                            <!-- <span class="ng-binding">1 Member</span> -->
-                            <i class="fa fa-eye" aria-hidden="true"></i> 1 View
-                            
-                        </a>
-                    </div>
-                    <div class="form-operations">
-                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-                            
-                        <!-- <span class="wms wms-more-horiz more-actions" popover-append-to-body="true" popover-class="form-operations-popover" popover-is-open="popup.isOpen" uib-popover-template="'currentformActions.html'" popover-trigger="'outsideClick'" popover-placement="right-bottom"></span> -->
-                    </div>
-                </div>
-            </li>
-            
-        </ul>
+            </div>
+        </div>
+
+
+
     </section>
 </div>

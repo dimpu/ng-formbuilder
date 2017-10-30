@@ -4,7 +4,7 @@
             dnd-effect-allowed="move"
             ng-repeat="field in $ctrl.formJson.fields" 
             dnd-moved="$ctrl.formJson.fields.splice($index, 1)"
-            dnd-selected="$ctrl.selectedField = ''; $ctrl.selectedField = field; $ctrl.onFieldSelect(field);"
+            ng-click="$ctrl.onFieldSelect1(field)"
             ng-class="{'selected': $ctrl.selectedField === field}"
             >
             <dnd-nodrag>

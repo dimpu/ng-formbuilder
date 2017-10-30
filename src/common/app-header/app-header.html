@@ -1,9 +1,5 @@
-<header class="forms-dashboard">
-
-</header>
-
-<nav class="navbar app--header">
-    <a class="navbar-brand" href="/">
+<nav class="app--header navbar navbar-dark p-0">
+    <a href="" class="navbar-brand">
         <span class="logo">FB</span>
         <span class="menu-name">Forms</span>
     </a>
@@ -11,42 +7,15 @@
 
 
 <nav class="navbar app--nav">
-    <ul class="nav navbar-nav">
-        <li class="active">
-            <a href="#">Forms</a>
+    <ul class="nav nav-tabs|pills nav-stacked">
+        <li class="nav-item active">
+            <a href="#" ui-sref="forms" class="nav-link active">Forms</a>
         </li>
-        <li>
-            <a href="#" ng-click="$ctrl.openCreateFormModal()">Fields</a>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Templates</a>
         </li>
     </ul>
 </nav>
-
-
-
-
-
-<div class="navbar forms--sub-nav" ng-show="$ctrl.showSubToolbar">
-    <ul class="nav navbar-nav">
-        <li class="active">
-            <a href="#">My Forms</a>
-        </li>
-        <li>
-            <a href="#">Templates</a>
-        </li>
-    </ul>
-</div>
-
-
-<div class="navbar forms--actions " ng-show="$ctrl.showSubToolbar">
-    <ul class="nav navbar-nav">
-        <li class="active">
-            <a class="app--btn app--btn__primary" href="#">Create</a>
-        </li>
-        <li>
-            <a class="app--btn" href="#">Import</a>
-        </li>
-    </ul>
-</div>
 
 
 <create-form></create-form>

@@ -3,8 +3,8 @@ import controller from './forms-dashboard.controller';
 import './forms-dashboard.scss';
 
 let formsDashboardComponent = {
-		template,
-		controller
+    template,
+    controller
 };
 
 export default formsDashboardComponent;

@@ -1,0 +1,13 @@
+{
+    "name": "Button",
+    "icon": " fa-square",
+    "json": {
+        "type": "button",
+        "label": "Button",
+        "name": "button_",
+        "default": "",
+        "varient": "default",
+        "size": "md",
+        "columnsize": 12
+      }
+}

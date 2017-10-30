@@ -1,8 +1,32 @@
+import FormActions from '../store/forms/actions';
+import FormSelector from '../store/forms/selectors';
+
+
 class FormBuilderDesignController {
-	constructor(){
-		this.selectedField = null;
-		this.name = 'form-builder-design';
-	}
+    constructor($ngRedux) {
+        this.selectedField = null;
+        this.disconnect = $ngRedux.connect(this.mapStateToThis, FormActions)(this);
+    }
+
+    mapStateToThis(state) {
+        return {
+            // forms: FormSelector.getForms(state).toJs()
+        }
+    }
+
+    $onChanges() {
+        console.log(this);
+    }
+
+    $onDistroy() {
+        this.disconnect();
+    }
+
+    onFieldSelect1(field) {
+        this.selectField(field);
+        this.selectedField = field;
+        console.log(field);
+    }
 }
 
 

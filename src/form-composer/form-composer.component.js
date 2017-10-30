@@ -4,8 +4,8 @@ import './form-composer.scss';
 import 'angular-ui-layout/src/ui-layout.css';
 
 let formComposerComponent = {
-		template,
-		controller
+    template,
+    controller
 };
 
 export default formComposerComponent;

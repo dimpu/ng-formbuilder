@@ -3,7 +3,6 @@ import BasicFieldTypeActions from '../store/basic-field-type/actions';
 
 class FieldsWidgetController {
     constructor($ngRedux) {
-        console.log(this);
         this.unsubscribe = $ngRedux.connect(this.mapStateToThis, BasicFieldTypeActions)(this);
     }
 
