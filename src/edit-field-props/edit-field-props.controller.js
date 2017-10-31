@@ -2,13 +2,13 @@ import FieldActions from '../store/fields/actions';
 
 
 class EditFieldPropsController {
-    constructor($ngStore) {
-        this.disconnect = $ngStore.connect(this.mapToState, FieldActions)(this);
+    constructor($ngRedux) {
+        this.disconnect = $ngRedux.connect(this.mapToState, FieldActions)(this);
     }
 
     mapToState() {
         return {
-			fields: 
+			// field:  
 		}
     }
 

@@ -6,5 +6,5 @@ const INITIAL_STATE = List();
 
 export default handleActions({
     [actions.fieldDeleteCompleted]: (state, action) => state.concat(action.payload)
-});
+}, INITIAL_STATE);
 
