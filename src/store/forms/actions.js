@@ -10,10 +10,10 @@ let actions = createActions({},
 );
 
 
-let fetchForms = () => {
+let fetchForms = (userId) => {
     return (dispatch) => {
         dispatch({ type: constants.FORMS_FETCHING});
-        api.fetchForms().then((data)=>{
+        api.fetchForms(userId).then((data)=>{
             dispatch(actions.formsFetchComplete(data) );
         });
     }
@@ -23,7 +23,8 @@ let createForm = (data) => {
     data.id = uuid();
     return (dispatch) => {
         dispatch({type: constants.DELETEING_FORM});
-        api.createForm().then((res)=> {
+        console.log(data);
+        api.createForm(data).then((res)=> {
             dispatch(actions.formCreated(data));
             dispatch(stateGo('form-composer', {id: data.id}));
         })
