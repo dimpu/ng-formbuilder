@@ -4,11 +4,12 @@ import firebase from '../../config';
 
 export const fetchForms = (userId) => {
 
-    var database = firebase.database().ref().child("forms").equalTo(userId, 'userId');
+    var database = firebase.database().ref().child("forms")
+    //.equalTo(userId, 'userId');
     
     return new Promise(resolve => {
         database.on('value', (forms) => {
-            console.log(forms.val());
+            console.log(forms);
             resolve(forms.val());
         });
     });
@@ -31,7 +32,18 @@ export const logIn = () => {
 }
 
 export const createForm  = (formData = {})  => {
-    return firebase.database().ref().child("forms").push().set(formData);
+    // Get a key for a new Post.
+    var newFormKey = formData.id;
+  
+    // Write the new post's data simultaneously in the posts list and the user's post list.
+    var updates = {};
+    updates['/forms/' + newFormKey] = formData;
+    // updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+  
+    return firebase.database().ref().update(updates);
+
+
+    // return firebase.database().ref().child('forms').ref(formData.id).set(formData);
 
     // return new Promise(resolve => {
     //     resolve({
