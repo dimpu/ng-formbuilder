@@ -5,7 +5,7 @@ import firebase from '../../config';
 import userActions from '../user/actions';
 import { router, stateGo, stateReload, stateTransitionTo } from 'redux-ui-router';
 
-import { fetchForms } from '../forms/actions';
+import formActions from '../forms/actions';
 import * as webapi from "../utils/webapi";
 
 const login = () => {
@@ -15,15 +15,9 @@ const login = () => {
         webapi.logIn().then((data)=>{
             console.log(data);
             dispatch(userActions.userAuthorized());
+            dispatch(formActions.fetchForms(data.user.uid));
             dispatch(stateGo('forms', {}));
         });
-        // firebase.auth()
-        //     .signInAnonymously()
-        //     .then((data) => {
-        //         dispatch(userActions.userAuthorized());
-        //         dispatch(stateGo('forms', {}));
-        //         dispatch(fetchForms());
-        //     });
     }
 }
 

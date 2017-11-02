@@ -8,7 +8,6 @@ class EditFieldPropsController {
 
     mapToState() {
         return {
-			// fields: 
 		}
     }
 

@@ -11,4 +11,11 @@ var config = {
   };
   firebase.initializeApp(config);
 
+
+
+  var provider = new firebase.auth.GithubAuthProvider();
+
+  
+
+  
 export default firebase;

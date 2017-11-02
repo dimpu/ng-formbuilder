@@ -3,7 +3,7 @@
             dnd-draggable="field" 
             dnd-effect-allowed="move"
             ng-repeat="field in $ctrl.formJson.fields" 
-            dnd-moved="$ctrl.formJson.fields.splice($index, 1)"
+            dnd-moved="$ctrl.formJson.fields.splice($index, 1); $ctrl.fieldAdded()"
             ng-click="$ctrl.onFieldSelect1(field)"
             ng-class="{'selected': $ctrl.selectedField === field}"
             >

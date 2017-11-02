@@ -15,7 +15,8 @@ class FormBuilderDesignController {
     }
 
     $onChanges() {
-        console.log(this);
+        console.log(this.formJson);
+        
     }
 
     $onDistroy() {
@@ -26,6 +27,10 @@ class FormBuilderDesignController {
         this.selectField(field);
         this.selectedField = field;
         console.log(field);
+    }
+
+    fieldAdded() {
+        console.log('fieldAdded');
     }
 }
 
