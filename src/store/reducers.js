@@ -3,13 +3,14 @@ import {router} from 'redux-ui-router';
 
 import basicFieldTypes from './basic-field-type/reducers';
 
+import app from './app/reducers';
 import forms from './forms/reducers';
-import user from './user/reducers';
+import auth from './auth/reducers';
 import fields from './fields/reducers';
 
 export default combineReducers({
   router,
-  user,
+  auth,
   forms,
   fields,
   basicFieldTypes 

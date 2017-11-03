@@ -1,6 +1,8 @@
-import * as fields from '../atoms/fields/field-types';
 import _ from 'lodash';
+
+import * as fields from '../atoms/fields/field-types';
 import FormActions from '../store/forms/actions';
+import AuthSelectors from '../store/auth/selectors';
 
 class NewFormController {
 
@@ -10,6 +12,7 @@ class NewFormController {
         this.formData = {};
         this.formJson = {};
         this.formJson.fields = [
+        
             _.assignIn(fields.text.json, {
                 label: 'Form Name',
                 name: 'formName',
@@ -29,14 +32,12 @@ class NewFormController {
                 name: 'formStatus',
                 inline: "true",
                 items: [{
-                        label: 'On',
-                        value: "true"
-                    },
-                    {
-                        label: 'Off',
-                        value: "false"
-                    }
-                ]
+                    label: 'On',
+                    value: "true"
+                }, {
+                    label: 'Off',
+                    value: "false"
+                }]
             }),
             _.assignIn(fields.button.json, {
                 label: 'Submit',
@@ -46,7 +47,18 @@ class NewFormController {
     }
 
     mapToState(state) {
-        return {};
+        console.log(AuthSelectors);
+        console.log(state);
+        return {
+            userEmail: state.auth.toJS().userEmail
+        };
+    }
+
+    $ngOnChange(changeObj) {
+        console.log(changeObj);
+        if(changeObj == 'userEmail') {
+            this.formJson.fields.userEmail = this.userEmail;
+        }
     }
 
     onSubmit(data) {

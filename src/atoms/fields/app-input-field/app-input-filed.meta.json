@@ -15,6 +15,22 @@
         }
     },
     {
+        "name": "Hidden",
+        "icon": "fa-text-width",
+        "json": {
+            "type": "hidden",
+            "label": "Hidden",
+            "name": "hidden_",
+            "placeholder": "",
+            "validate": {
+                "require": "false",
+                "minlenght": "undefined",
+                "maxlenght": "undefined"
+            },
+            "columnsize": 12
+        }
+    }, 
+    {
         "name": "Email",
         "icon": "fa-envelope-o ",
         "json": {

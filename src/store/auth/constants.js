@@ -1,1 +1,8 @@
 export const LOGIN = 'LOGIN';
+
+export const SET_USER_EMAIL = 'SET_USER_EMAIL';
+export const SET_USER_DISPLAY_NAME = 'SET_USER_DISPLAY_NAME';
+
+export const USER_AUTHORIZING = 'USER_AUTHORIZING';
+export const USER_AUTHORIZED = 'USER_AUTHORIZED';
+

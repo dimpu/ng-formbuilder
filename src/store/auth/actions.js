@@ -1,36 +1,34 @@
 import { createActions, createAction } from 'redux-actions';
-import * as constants from './constants';
-
-import firebase from '../../config';
-import userActions from '../user/actions';
 import { router, stateGo, stateReload, stateTransitionTo } from 'redux-ui-router';
 
+import * as constants from './constants';
+import firebase from '../../config';
 import formActions from '../forms/actions';
 import * as webapi from "../utils/webapi";
+
+
+let actions = createActions({}, ...Object.values(constants));
+
+
 
 const login = () => {
     return (dispatch) => {
         dispatch({type: 'LOGIN'});
-        dispatch(userActions.userStartAuthorizing());
+        dispatch(actions.userAuthorizing());
         webapi.logIn().then((data)=>{
             console.log(data);
-            dispatch(userActions.userAuthorized());
-            dispatch(formActions.fetchForms(data.user.uid));
+            
+            dispatch(actions.setUserDisplayName(data.user.displayName));
+            dispatch(actions.setUserEmail(data.user.email));
+            
+            dispatch(actions.userAuthorized());
+            dispatch(formActions.fetchForms(data.user.email));
             dispatch(stateGo('forms', {}));
         });
     }
 }
 
-let actions = createActions({});
 actions.login = login;
-
-// let actions = createAction('LOGIN',webapi.logIn);
-
-// actions.login = () => {
-//     return webapi.logIn.then((data)=>{
-//         console.log(data);
-//     });
-// }
 
 export default actions;
 

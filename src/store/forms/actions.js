@@ -10,10 +10,10 @@ let actions = createActions({},
 );
 
 
-let fetchForms = (userId) => {
+let fetchForms = (email) => {
     return (dispatch) => {
         dispatch({ type: constants.FORMS_FETCHING});
-        api.fetchForms(userId).then((data)=>{
+        api.fetchForms(email).then((data)=>{
             dispatch(actions.formsFetchComplete(data) );
         });
     }

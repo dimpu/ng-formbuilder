@@ -5,10 +5,11 @@ import radio from './app-radio-field/app-radio-field.meta.json';
 import select from './app-select-field/app-select-field.meta.json';
 import button from './app-button-field/app-button-field.meta.json';
 
-let [text, email, phone, time, color, datatime, month, range, week, url] = input;
+let [text, hidden, email, phone, time, color, datatime, month, range, week, url] = input;
 
 export {
     text,
+    hidden,
     email,
     phone,
     time,

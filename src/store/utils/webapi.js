@@ -17,13 +17,9 @@ export const fetchForms = (userId) => {
     // return fetch('../data/forms.json').then((res)=>res.json());
 }
 
-
 export const logIn = () => {
-
     var provider = new firebase.auth.GithubAuthProvider();
-  
     return firebase.auth().signInWithPopup(provider);
-
     // return firebase.auth().signInAnonymously()
     // return new Promise(resolve => { 
     //     resolve(user);
@@ -34,17 +30,11 @@ export const logIn = () => {
 export const createForm  = (formData = {})  => {
     // Get a key for a new Post.
     var newFormKey = formData.id;
-  
     // Write the new post's data simultaneously in the posts list and the user's post list.
     var updates = {};
     updates['/forms/' + newFormKey] = formData;
-    // updates['/user-posts/' + uid + '/' + newPostKey] = postData;
-  
     return firebase.database().ref().update(updates);
-
-
     // return firebase.database().ref().child('forms').ref(formData.id).set(formData);
-
     // return new Promise(resolve => {
     //     resolve({
     //         status: 'Success'
