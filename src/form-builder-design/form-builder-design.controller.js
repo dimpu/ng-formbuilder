@@ -1,6 +1,6 @@
 import FormActions from '../store/forms/actions';
-import FormSelector from '../store/forms/selectors';
-
+// import FieldSelector from '../store/fields/selectors';
+import {isEmpty} from 'lodash';
 
 class FormBuilderDesignController {
     constructor($ngRedux) {
@@ -10,12 +10,20 @@ class FormBuilderDesignController {
 
     mapStateToThis(state) {
         return {
-            // forms: FormSelector.getForms(state).toJs()
+            // fields: FieldSelector.getFields(state).toJs()
         }
     }
 
-    $onChanges() {
-        console.log(this.formJson);
+    $onChanges(changeObject) {
+        console.log('-----form change------');
+        console.log(isEmpty(this.formJson));
+        if(isEmpty(this.formJson)) {
+            this.formJson.fields = [];
+            // this.formJson.fields.push({
+            //     columnsize: 12,
+            //     type: 'empty'
+            // });
+        }
         
     }
 
@@ -31,6 +39,14 @@ class FormBuilderDesignController {
 
     fieldAdded() {
         console.log('fieldAdded');
+    }
+
+    dragend() {
+        console.log('drag end');
+    }
+
+    dragoverCallback() {
+        console.log('drag over');
     }
 }
 

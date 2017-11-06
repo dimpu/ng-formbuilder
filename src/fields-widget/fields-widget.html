@@ -3,8 +3,12 @@
    <label class="panel-title text-white pl-3"><strong>Basic fields</strong></label>
     <div class="fields-list-container">
         <div class="sub-group">
-            <ol dnd-list="list">
-                <li dnd-draggable="field.json" dnd-effect-allowed="move" dnd-copied="field.id = field.id + 1" class="field-widget" ng-repeat="field in $ctrl.fieldTypes track by $index ">
+            <ol dnd-list="list" dnd-allowed-types="false">
+                <li dnd-draggable="field.json" 
+                    dnd-effect-allowed="copy" 
+                    dnd-copied="field.id = field.id + 1; $ctrl.onCopied(field.json)" 
+                    class="field-widget" 
+                    ng-repeat="field in $ctrl.fieldTypes track by $index ">
                     <i class="fa design-tool-icon {{field.icon}}" aria-hidden="true"></i>
                     <p ng-if="group.name !== 'prefabs'" class="design-tool-name">{{field.name}}</p>
                 </li>

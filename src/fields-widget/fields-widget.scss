@@ -9,4 +9,8 @@ fields-widget {
             line-height: 36px;
         }
     }
+
+    [dnd-list] .dndPlaceholder {
+        display: none;
+    }
 }

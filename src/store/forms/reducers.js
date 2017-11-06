@@ -4,26 +4,18 @@ import * as actions from './actions';
 
 import * as constants from './constants';
 
-const INITIAL_STATE = List();
+const INITIAL_STATE = Map({});
 
 
 export default handleActions({
     [constants.FORMS_FETCH_COMPLETE]: (state, action) => {
-        return state.concat(action.payload);
+        return state.merge(action.payload);
     },
     [constants.FORM_CREATED]: (state, action) => {
-        state.push(action.payload);
-        return state;
+        return state.set(action.payload.id, action.payload);
     },
     [constants.FORM_DELETE_COMPLETE]: (state, action) => {
-        console.log(state);
-        return state.delete(parseInt(action.payload)); 
-    },
-    [constants.SELECT_FIELD]: (state, action) => {
-        return state;
-    },
-    [constants.SELECT_FORM] : (state, action) => {
-        
+        return state.delete(action.payload); 
     }
 }, INITIAL_STATE);
 

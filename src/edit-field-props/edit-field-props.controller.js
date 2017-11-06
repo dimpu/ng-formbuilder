@@ -1,5 +1,5 @@
 import FieldActions from '../store/fields/actions';
-
+ 
 
 class EditFieldPropsController {
     constructor($ngRedux) {
@@ -8,7 +8,8 @@ class EditFieldPropsController {
 
     mapToState() {
         return {
-		}
+            // field: 
+        }
     }
 
     $ngDistroy() {

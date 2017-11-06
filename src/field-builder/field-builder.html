@@ -8,6 +8,9 @@
         <app-button-field ng-switch-when="button" field="$ctrl.field" form-name="$ctrl.formName" form-data="$ctrl.formData"></app-button-field>
         <app-button-field ng-switch-when="submit" field="$ctrl.field" form-name="$ctrl.formName" form-data="$ctrl.formData"></app-button-field>
         <app-button-field ng-switch-when="reset" field="$ctrl.field" form-name="$ctrl.formName" form-data="$ctrl.formData"></app-button-field>
+        <div class="empty-field text-center" ng-switch-when="empty">
+            <h2>No Fields</h2>
+        </div>
     </div>
 </div>
 

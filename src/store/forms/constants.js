@@ -11,5 +11,4 @@ export const DELETEING_FORM = 'DELETEING_FORM';
 export const FORM_DELETE_COMPLETE  = 'FORM_DELETE_COMPLETE'; 
 
 
-export const SELECT_FIELD = 'SELECT_FIELD';
 export const SELECT_FORM = 'SELECT_FORM';

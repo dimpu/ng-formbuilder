@@ -22,7 +22,7 @@ class FormsDashboardController {
         this.selectedField = field;
     }
 
-    confirmDeleteForm(formId) {
+    confirmDeleteForm(form) {
         let self = this;
         this.$ngConfirm({
             title: 'Delete Form',
@@ -34,7 +34,7 @@ class FormsDashboardController {
                     keys: ['enter'], // will trigger when enter is pressed 
                     action: function (scope) {
                         this.close();
-                        self.deleteForm(formId);
+                        self.deleteForm(form);
                     }
                 },
                 close: function (scope) {}
@@ -43,7 +43,7 @@ class FormsDashboardController {
     }
 
     $onChanges() {
-        console.log(this);
+        
     }
 
     $onDistroy() {

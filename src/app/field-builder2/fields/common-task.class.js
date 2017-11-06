@@ -10,7 +10,7 @@ class CommonTask {
     }
 
     $onChanges() {
-        console.log(this);
+        
     }
 
 }

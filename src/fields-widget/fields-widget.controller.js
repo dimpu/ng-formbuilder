@@ -12,10 +12,14 @@ class FieldsWidgetController {
         };
     }
 
-    ngOnDestroy() {
+    $ngOnDestroy() {
         this.unsubscribe();
     }
 
+    onCopied(field) {
+        this.fieldCopied(field);
+        console.log('onCopied');
+    }
 }
 
 

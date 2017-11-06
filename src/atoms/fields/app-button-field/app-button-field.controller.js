@@ -1,6 +1,6 @@
 class AppButtonFieldController {
 	constructor(){
-		console.log(this);
+		
 	}
 }
 

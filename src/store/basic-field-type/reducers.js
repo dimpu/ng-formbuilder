@@ -7,8 +7,14 @@ const INITIAL_STATE = Immutable.fromJS(
   Object.values(fieldTypes)
 );
 
-export default handleActions({
-    [constants.LOAD_FIELD_TYPES]: (state, action) => state.fieldTypes
+
+
+
+let actions = handleActions({
+  [constants.LOAD_FIELD_TYPES]: (state, action) => state.fieldTypes
 }, INITIAL_STATE);
+
+
+export default actions;
 
 

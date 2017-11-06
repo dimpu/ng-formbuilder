@@ -1,6 +1,15 @@
 form-composer {
     display: block;
     height: 100%;
+
+    .form-canvas> div,
+    .form-canvas .tab-content {
+        height: 100%;
+    }
+    .nav-tabs .nav-link, .nav-tabs .navbar .dropdown-toggle, .navbar .nav-tabs .dropdown-toggle {
+        border: 0;
+    }
+
     .composer-canvas {
         position: relative;
         display: block;
@@ -9,6 +18,7 @@ form-composer {
 
     .ui-layout-column > .ui-splitbar {
         background: #101010;
+
         // a {
         //     display: none !important;
 
@@ -28,7 +38,26 @@ form-composer {
     .nav-tabs {
         background: #000000;
         height: 36px;
-        
+
+        li.publish-btn {
+            position: absolute;
+            right: 0;
+
+            a {
+                background: #1794ef !important;
+                color: #fff;
+                margin: 5px;
+                padding: 3px 12px;
+                border-radius: 2px;
+
+                &:hover {
+                    border: 0;
+                }
+            }
+        }
+        li a{
+            border-top: 2px solid #000;
+        }
         li a {
             background: 0 0;
             display: inline-block;
@@ -42,6 +71,7 @@ form-composer {
             border-top: 2px solid transparent;
             line-height: 18px;
             min-height: auto;
+
             &:hover {
                 border: 0;
                 border-top: 2px solid #fff;
@@ -57,7 +87,7 @@ form-composer {
         li.active a {
             background-color: #3f3f3f;
             border: 0;
-            border-top: 2px solid #1794ef;
+            border-top: 2px solid #1794ef !important;
             color: #f5f3f3;
         }
 
@@ -65,32 +95,35 @@ form-composer {
             border-color: #1794ef !important;
         }
 
-        // li a:hover,
-        // li a:focus {
-        //     color: #555;
-        //     cursor: default;
-        //     background-color: #fff;
-        //     border: 1px solid #ddd;
-        //     border-bottom-color: transparent;
-        //     background-color: #3f3f3f;
-        //     border: 0;
-        //     border-top: 2px solid #1794ef;
-        //     color: #f5f3f3;
-        // }
+        li a:hover,
+        li a:focus {
+            border-top: 2px;
+
+            //     color: #555;
+            //     cursor: default;
+            //     background-color: #fff;
+            //     border: 1px solid #ddd;
+            //     border-bottom-color: transparent;
+            //     background-color: #3f3f3f;
+            //     border: 0;
+            //     border-top: 2px solid #1794ef;
+            //     color: #f5f3f3;
+       
+        }
     }
 }
 
-
-
 .fields-list-container {
-    padding:  0 15px;
+    padding: 0 15px;
+
     .sub-group {
         &-name {
             display: inline-block;
             max-width: 100%;
             margin-bottom: 5px;
-            padding:10px;
+            padding: 10px;
         }
+
         .field-widget {
             position: relative;
             display: inline-block;
@@ -102,12 +135,14 @@ form-composer {
             color: #949393;
             background-color: #333;
         }
+
         .design-tool-icon {
             font-size: 32px;
             width: 32px;
             height: 32px;
             display: inline-block;
         }
+
         .design-tool-name {
             text-transform: capitalize;
             white-space: nowrap;
@@ -115,28 +150,31 @@ form-composer {
             text-overflow: ellipsis;
             margin: 5px 0 0;
         }
+
         ol {
             padding: 0;
         }
     }
 }
 
-
 .expand-collapse-toolbar {
-        width: 25px;
-        border: none;
-        box-shadow: none;
-        background-color: #171717;
-        padding: 0 10px 0 0;
-        height: 36px;
-        margin: 0;
-        a:hover {
-            background: transparent;
-        }
+    width: 25px;
+    border: none;
+    box-shadow: none;
+    background-color: #171717;
+    padding: 0 10px 0 0;
+    height: 36px;
+    margin: 0;
+
+    a:hover {
+        background: transparent;
+    }
+
     i {
         margin: 0 -1px 0 0;
         background-color: #404040;
         padding: 0;
+
         // height: 19px;
         width: 16px;
         font-size: 8px;
@@ -144,4 +182,3 @@ form-composer {
         border-radius: 2px;
     }
 }
-

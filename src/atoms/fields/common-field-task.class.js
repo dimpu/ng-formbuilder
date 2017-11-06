@@ -18,7 +18,7 @@ class CommonFieldTask {
     $onChanges() {
         this.setDefaultValue();
         this.setRandomFieldName();
-        console.log(this);
+        
     }
   
   }

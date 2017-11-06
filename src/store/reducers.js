@@ -10,6 +10,8 @@ import fields from './fields/reducers';
 
 export default combineReducers({
   router,
+
+  app,
   auth,
   forms,
   fields,

@@ -6,3 +6,5 @@ export const FIELD_ADDED  = 'FIELD_ADDED';
 
 export const FIELD_DELETEING = 'FIELD_DELETEING';
 export const FIELD_DELETE_COMPLETED = 'FIELD_DELETED'
+
+export const SELECT_FIELD = 'SELECT_FIELD';

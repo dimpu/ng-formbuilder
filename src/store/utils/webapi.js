@@ -1,52 +1,67 @@
 import forms from '../data/forms.json';
 import user from '../data/user.json';
 import firebase from '../../config';
+import uuid from 'uuid';
 
 export const fetchForms = (userId) => {
-
     var database = firebase.database().ref().child("forms")
-    //.equalTo(userId, 'userId');
-    
+
     return new Promise(resolve => {
         database.on('value', (forms) => {
-            console.log(forms);
             resolve(forms.val());
         });
     });
-
-    // return fetch('../data/forms.json').then((res)=>res.json());
 }
 
 export const logIn = () => {
     var provider = new firebase.auth.GithubAuthProvider();
     return firebase.auth().signInWithPopup(provider);
-    // return firebase.auth().signInAnonymously()
-    // return new Promise(resolve => { 
-    //     resolve(user);
-    // });
-    // return fetch('../data/user.json').then((res) => res.json().body);
 }
 
-export const createForm  = (formData = {})  => {
-    // Get a key for a new Post.
-    var newFormKey = formData.id;
-    // Write the new post's data simultaneously in the posts list and the user's post list.
+export const createForm = (formData = {}) => {
     var updates = {};
-    updates['/forms/' + newFormKey] = formData;
+    updates['/forms/' + formData.id] = formData;
     return firebase.database().ref().update(updates);
-    // return firebase.database().ref().child('forms').ref(formData.id).set(formData);
-    // return new Promise(resolve => {
-    //     resolve({
-    //         status: 'Success'
-    //     });
-    // });
 }
 
-
-export const deleteForm = () => {
+export const deleteForm = (formData) => {
     return new Promise(resolve => {
-        resolve({
-            status: 'Success'
+        firebase.database().ref('/forms/' + formData.id).remove(() => {
+            resolve({
+                state: 'Success'
+            });
         });
-    }); 
+    });
+}
+
+export const addField = (fieldData = {}) =>  {
+    console.log(fieldData);
+    if (!fieldData) return;
+    fieldData.id = fieldData.id || uuid(); 
+    return firebase.database().ref('fields/' + fieldData.id).set(fieldData);
+}
+
+export const updateField = (fieldData = {}) =>  {
+    var updates = {};
+    updates['/forms/' + fieldData.id] = fieldData;
+    return firebase.database().ref().update(updates);
+}
+
+export const deleteField = (fieldData = {}) => {
+    return new Promise(resolve => {
+        firebase.database().ref('/fields/' + fieldData.id).remove(() => {
+            resolve({
+                status: 'Success'
+            });
+        })
+    });
+}
+
+export const fetchFields = (formId) => {
+    var database = firebase.database().ref().child("fields")
+    return new Promise(resolve => {
+        database.on('value', (fields) => {
+            resolve(fields.val());
+        });
+    });
 }

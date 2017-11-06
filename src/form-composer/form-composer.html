@@ -4,11 +4,8 @@
         <div ui-layout-container size="324px" min-size="324px" max-size="324px">
             <fields-widget></fields-widget>
         </div>
-        <div ui-layout-container>
+        <div ui-layout-container class="form-canvas">
             <uib-tabset active="0">
-                <!-- <uib-tab class="expand-collapse-toolbar">
-                 
-                </uib-tab> -->
                 <uib-tab heading="Design" class="active">
                     <form-builder-design form-data="$ctrl.formData" form-json="$ctrl.formJson"></form-builder-design>
                 </uib-tab>
@@ -18,6 +15,7 @@
                 <uib-tab heading="Settings">
                     <form-settings></form-settings>
                 </uib-tab>
+                <uib-tab class="publish-btn" heading="Publish"></uib-tab>
             </uib-tabset>
         </div>
         <div ui-layout-container size="324px">
