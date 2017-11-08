@@ -28,8 +28,8 @@ let addField = (field) => {
 let updateField = (field) => {
     return (dispatch) => {
         dispatch(actions.fieldUpdating(field));
-        api.fieldUpdate(field).then((field)=>{
-            dispatch(actions.fieldUpdateCompltete(field));
+        api.updateField(field).then((field)=>{
+            //dispatch(actions.fieldUpdateCompltete(field));
         });
     }
 }
