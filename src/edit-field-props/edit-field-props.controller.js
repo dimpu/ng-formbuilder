@@ -6,9 +6,9 @@ class EditFieldPropsController {
         this.disconnect = $ngRedux.connect(this.mapToState, FieldActions)(this);
     }
 
-    mapToState() {
+    mapToState(state) {
         return {
-            // field: 
+            field: state.app.get('selectedField') 
         }
     }
 

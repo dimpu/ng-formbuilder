@@ -1,5 +1,6 @@
 import { createActions, createAction } from 'redux-actions';
 import * as constants from './constants';
+import appActions from '../app/actions';
 import * as api from '../utils/webapi';
 
 let actions = createActions({}, 
@@ -8,9 +9,9 @@ let actions = createActions({},
 
 let fetchFields = (formId) => {
     return (dispatch) => {
-        dispatch(actions.fetchingFields(formId));
+        dispatch(actions.fieldsFetching(formId));
         api.fetchFields(formId).then((data) => {
-            dispatch(actions.fetchFieldsComplete(data));
+            dispatch(actions.fieldsFetchComplete(data));
         });
     }
 };
@@ -19,12 +20,22 @@ let addField = (field) => {
     return (dispatch) => {
        dispatch(actions.fieldAdding());
        api.addField(field).then((data) => {
-            dispatch(actions.fieldAdded());
+            dispatch(actions.fieldAdded(field));
        });
     };
 };
 
+let updateField = (field) => {
+    return (dispatch) => {
+        dispatch(actions.fieldUpdating(field));
+        api.fieldUpdate(field).then((field)=>{
+            dispatch(actions.fieldUpdateCompltete(field));
+        });
+    }
+}
+
 actions.fetchFields = fetchFields;
 actions.addField = addField;
+actions.updateField = updateField;
 
 export default actions;

@@ -1,18 +1,16 @@
 <form novalidate name="NFB" dnd-list="$ctrl.formJson.fields">
     <div dnd-list="$ctrl.formJson.fields">
-        <div dnd-draggable="field" class="no-field text-center col-xs-12" ng-if="!$ctrl.formJson.fields.length">
+        <div dnd-draggable="field" class="no-field text-center col-xs-12" ng-if="!$ctrl.fields.length">
             <h2>No Fields</h2>
         </div>
         <div class="f-list" 
-            ng-repeat="field in $ctrl.formJson.fields" 
+            ng-repeat="field in $ctrl.fields" 
             dnd-draggable="field" 
             dnd-effect-allowed="move" 
-            dnd-moved="$ctrl.formJson.fields.splice($index, 1); $ctrl.fieldAdded()"
-            dnd-copied="$ctrl.dragend()"
             dnd-dragend="$ctrl.dragend()" 
             dnd-inserted="$ctrl.dragoverCallback(index, external, type)" 
-            ng-click="$ctrl.onFieldSelect1(field)"
-            ng-class="{'selected': $ctrl.selectedField === field}">
+            ng-click="$ctrl.selectedField = field;$ctrl.fieldSelect(field)"
+            ng-class="{'selected': $ctrl.selectedField.id == field.id}">
             <dnd-nodrag>
                 <div dnd-handle class="handle">:::</div>
                 <field-builder form-name="NFB" field="field" form-data="$ctrl.formData"></field-builder>

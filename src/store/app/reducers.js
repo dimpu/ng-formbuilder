@@ -15,10 +15,9 @@ const INITIAL_STATE = Map({
 });
 
 export default handleActions({
-    [fieldConstants.FIELD_ADDED]: (state, action) => {
-
-    },
-    [constants.SET_LOGGED_IN_USER_EMAIL]: (state, action) => {
-        return state.set('loggedInUserEmail', action.payload);
-    }
+    [fieldConstants.FIELD_SELECT]: (state, action) => {
+        console.log(action);
+        return state.set('selectedField',action.payload)
+    }, 
+    [constants.SET_LOGGED_IN_USER_EMAIL]: (state, action) => state.set('loggedInUserEmail', action.payload)
 },INITIAL_STATE);

@@ -6,10 +6,9 @@ class FormComposerController {
         this.disconnect = $ngRedux.connect(this.mapToState, FieldsActions)(this);
         this.formData = {};
         this.formJson = {};
-        FieldsActions.fetchFields();
     }
     
-    $ngOnInit() {
+    $onInit() {
         this.fetchFields(this.formId);
     }
 
@@ -19,7 +18,6 @@ class FormComposerController {
 
     mapToState(state) {
       return {
-        fields: state.fields
       }
     }
 
