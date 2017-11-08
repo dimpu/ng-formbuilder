@@ -15,13 +15,9 @@ class FormBuilderDesignController {
         }
     }
 
-    $onChanges(changeObject) {
-    }
-
-    $onDistroy() {
+    onDistroy() {
         this.disconnect();
     }
-
    
     onFieldSelect(field) {
         this.fieldSelect(field);
@@ -29,16 +25,8 @@ class FormBuilderDesignController {
         console.log(field);
     }
 
-    fieldAdded() {
-        console.log('fieldAdded');
-    }
-
-    dragend() {
-        console.log('drag end');
-    }
-
-    dragoverCallback() {
-        console.log('drag over');
+    hasFields(fields) {
+        return isEmpty(fields); 
     }
 }
 

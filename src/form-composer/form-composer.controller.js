@@ -9,11 +9,8 @@ class FormComposerController {
     }
     
     $onInit() {
+        this.setFormId(this.formId);
         this.fetchFields(this.formId);
-    }
-
-    $ngOnChange(changeObject) {
-        console.log(changeObject);
     }
 
     mapToState(state) {

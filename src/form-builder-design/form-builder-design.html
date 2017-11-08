@@ -1,6 +1,6 @@
 <form novalidate name="NFB" dnd-list="$ctrl.formJson.fields">
     <div dnd-list="$ctrl.formJson.fields">
-        <div dnd-draggable="field" class="no-field text-center col-xs-12" ng-if="!$ctrl.fields.length">
+        <div dnd-draggable="field" class="no-field text-center col-xs-12" ng-if="$ctrl.hasFields($ctrl.fields)">
             <h2>No Fields</h2>
         </div>
         <div class="f-list" 
@@ -13,6 +13,9 @@
             ng-class="{'selected': $ctrl.selectedField.id == field.id}">
             <dnd-nodrag>
                 <div dnd-handle class="handle">:::</div>
+                <a class="delete" ng-click="$ctrl.deleteField(field)">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </a>
                 <field-builder form-name="NFB" field="field" form-data="$ctrl.formData"></field-builder>
             </dnd-nodrag>
         </div>

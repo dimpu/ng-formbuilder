@@ -1,15 +1,16 @@
-import { createSelector } from 'reselect';
-import { Map } from 'immutable';
+import {
+    createSelector
+} from 'reselect';
+import {
+    Map
+} from 'immutable';
 
 const basicFieldTypes = state => state.basicFieldTypes;
+const selectedFormId = state => state.app.get('selectedFormId');
 
-// function which we will use to write our select logic
-const getBasicFieldTypes = (basicFieldTypes) => basicFieldTypes;
+const getBasicFieldTypes = createSelector(basicFieldTypes, (basicFieldTypes) => basicFieldTypes.map(field => field.setIn(['json','formId'], selectedFormId)));
+
 
 export default {
-  getBasicFieldTypes: createSelector(
-      basicFieldTypes,
-      getBasicFieldTypes // last arugment is function
-    ) 
+    getBasicFieldTypes
 }
-

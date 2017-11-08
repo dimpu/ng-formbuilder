@@ -8,17 +8,17 @@
             <div class="basic-props">
                 <div class="form-group col-xs-12">
                     <label for="">Label</label>
-                    <input type="text" class="form-control" id="" placeholder="Name" ng-model="$ctrl.field.label" ng-change="$ctrl.updateField(field)">
+                    <input type="text" class="form-control" id="" placeholder="Name" ng-model="$ctrl.field.label" ng-change="$ctrl.updateField($ctrl.field)">
                 </div>
 
                 <div class="form-group col-xs-12">
                     <label for="">Name</label>
-                    <input type="text" class="form-control" id="" placeholder="Name" ng-model="$ctrl.field.name" ng-change="$ctrl.updateField(field)">
+                    <input type="text" class="form-control" id="" placeholder="Name" ng-model="$ctrl.field.name" ng-change="$ctrl.updateField($ctrl.field)">
                 </div>
 
                 <div class="form-group col-xs-12">
                     <label for="">Placeholder</label>
-                    <input type="text" class="form-control" id="" placeholder="Placeholder" ng-model="$ctrl.field.placeholder" ng-change="$ctrl.updateField(field)" >
+                    <input type="text" class="form-control" id="" placeholder="Placeholder" ng-model="$ctrl.field.placeholder" ng-change="$ctrl.updateField($ctrl.field)" >
                 </div>
             </div>
         </uib-tab>

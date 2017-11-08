@@ -39,6 +39,12 @@ form-builder-design {
 
     .f-list {
         display: flex;
+        position: relative;
+        .delete {
+            position: absolute;
+            top: 2px;
+            right: 8px;
+        }
     }
 
     .selected {
