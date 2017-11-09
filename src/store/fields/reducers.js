@@ -10,6 +10,10 @@ export default handleActions({
     [actions.fieldDeleteCompleted]: (state, action) => state.concat(action.payload),
     [actions.fieldAdded]: (state, action) => state.set(action.payload.id, action.payload),
     [actions.fieldUpdating]: (state, action) => state.set(action.payload.id, action.payload),
-    [actions.deletingField]: (state, action) => state.delete(action.payload.id)
+    [actions.deletingField]: (state, action) => state.delete(action.payload.id),
+    [actions.fieldUpdateIndex]: (state, action) => {
+        console.log(action);
+        return state;
+    }
 }, INITIAL_STATE);
 
