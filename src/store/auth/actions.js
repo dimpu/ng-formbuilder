@@ -22,7 +22,6 @@ const login = () => {
             dispatch(actions.setUserEmail(data.user.email));
             
             dispatch(actions.userAuthorized());
-            dispatch(formActions.fetchForms(data.user.email));
             dispatch(stateGo('forms', {}));
         });
     }

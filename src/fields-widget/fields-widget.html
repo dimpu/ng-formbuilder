@@ -7,7 +7,7 @@
                 <li dnd-draggable="field.json" 
                     dnd-effect-allowed="copy" 
                     dnd-drop="$ctrl.onDrop()"
-                    dnd-copied="field.id = field.id + 1; $ctrl.onCopied(field.json)" 
+                    dnd-copied="$ctrl.onCopied(field.json)" 
                     class="field-widget" 
                     ng-repeat="field in $ctrl.fieldTypes track by $index ">
                     <i class="fa design-tool-icon {{field.icon}}" aria-hidden="true"></i>

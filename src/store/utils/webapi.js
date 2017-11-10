@@ -59,6 +59,7 @@ export const deleteField = (fieldData = {}) => {
 
 export const fetchFields = (formId) => {
     var database = firebase.database().ref().child("fields")
+    .orderByChild("formId").equalTo(formId);
     return new Promise(resolve => {
         database.on('value', (fields) => {
             resolve(fields.val());

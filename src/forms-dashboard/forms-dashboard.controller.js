@@ -7,7 +7,9 @@ class FormsDashboardController {
         this.$ngConfirm = $ngConfirm;
 		this.selectedField = null;
         this.disconnect = $ngRedux.connect(this.mapStateToThis, FormActions)(this);
-        // this.fetchForms();
+        this.fetchForms();
+                    // dispatch(formActions.fetchForms(data.user.email));
+
     }
 
     mapStateToThis(state) {

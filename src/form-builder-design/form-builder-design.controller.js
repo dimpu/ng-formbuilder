@@ -11,7 +11,7 @@ class FormBuilderDesignController {
 
     mapStateToThis(state) {
         return {
-             fields: state.fields.toJS()
+             fields: FieldSelector.getFields(state).toJS()
         }
     }
 
@@ -23,6 +23,15 @@ class FormBuilderDesignController {
         this.fieldSelect(field);
         this.selectedField = field;
         console.log(field);
+    }
+
+    dropCallback() {
+        console.log('dropped');
+    }
+
+    fieldUpdateIndex(index) {
+        console.log('---index---');
+        console.log(index);
     }
 
     hasFields(fields) {

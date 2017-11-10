@@ -8,6 +8,7 @@
             dnd-draggable="field" 
             dnd-effect-allowed="move" 
             dnd-drop="$ctrl.dragend()" 
+            dnd-drop="$ctrl.dropCallback(index, item, external, type)"
             dnd-moved="$ctrl.fieldUpdateIndex(field,$index)"
             dnd-inserted="$ctrl.dragoverCallback(index, external, type)" 
             ng-click="$ctrl.selectedField = field;$ctrl.fieldSelect(field)"

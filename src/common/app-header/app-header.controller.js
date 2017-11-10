@@ -1,25 +1,20 @@
+import NetworkSelector from '../../store/network/selectors';
+import AppActions from '../../store/app/actions';
+
 class AppHeaderController {
-    constructor($uibModal) {
-        this.$uibModal = $uibModal;
-        this.name = 'app-header';
+    constructor($ngRedux) {
+        this.disconnect = $ngRedux.connect(this.mapToState, AppActions)(this);
     }
 
-    openCreateFormModal() {
-        var modalInstance = this.$uibModal.open({
-            component: 'createForm',
-            resolve: {
+    mapToState(state) {
+        return {
+            fetching: NetworkSelector.getNetwork(state)
+        }
+    }
 
-            }
-        });
-
-        modalInstance.result.then(function (selectedItem) {
-            //   $ctrl.selected = selectedItem;
-        }, function () {
-            //   $log.info('modal-component dismissed at: ' + new Date());
-        });
-    };
-
-
+    onDistory(){
+        this.disconnect();
+    }
 
 
 }
